@@ -1,0 +1,24 @@
+{
+  "name": "portfolio-alice",
+  "version": "1.0.0",
+  "description": "My portfolio page V3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "deploy": "gh-pages -d build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/alice-slicez/portfolio-alice.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/alice-slicez/portfolio-alice/issues"
+  },
+  "homepage": "https://github.com/alice-slicez/portfolio-alice#readme",
+  "dependencies": {
+    "gh-pages": "^3.2.3"
+  }
+}
