@@ -4,20 +4,22 @@
   "description": "My portfolio page V3",
   "main": "index.js",
   "scripts": {
-    "deploy": "gh-pages -d build"
+    "deploy": "gh-pages -d build",
+    "sass": "node-sass -w scss/ -o build/css/ --recursive"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/alice-slicez/portfolio-alice.git"
   },
   "keywords": [],
-  "author": "",
+  "author": "Alice Zhang",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/alice-slicez/portfolio-alice/issues"
   },
   "homepage": "https://alice-slicez.github.io/portfolio-alice/",
   "dependencies": {
-    "gh-pages": "^3.2.3"
+    "gh-pages": "^3.2.3",
+    "node-sass": "^6.0.1"
   }
 }

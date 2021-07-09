@@ -1,0 +1,23 @@
+@import url("assets/fonts/Aileron-Black.otf");
+@import url("assets/fonts/Aileron-Bold.otf");
+@import url("assets/fonts/Aileron-Regular.otf");
+@import url("assets/fonts/Aileron-Semibold.otf");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700&display=swap");
+body {
+  background: #fff; }
+
+h1,
+h2,
+h3,
+h4,
+h5,
+p {
+  color: #192029; }
+
+.alice {
+  color: #aa5f40; }
+
+#intro,
+#projects,
+#contact {
+  text-align: left; }
