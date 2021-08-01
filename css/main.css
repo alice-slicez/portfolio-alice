@@ -53,9 +53,6 @@ h5,
 p {
   color: #192029; }
 
-.alice {
-  color: #aa5f40; }
-
 #intro,
 #projects,
 #contact {
@@ -80,7 +77,7 @@ body {
     padding-left: 80px;
     padding-right: 80px; }
     body header #navbar .name-badge {
-      color: #f3bd5e;
+      color: #fff;
       display: inline-block;
       padding: 8px 16px;
       font-family: "Inter", sans-serif;
@@ -91,8 +88,11 @@ body {
       display: flex;
       flex-direction: row;
       justify-content: flex-end;
-      color: #fcfcfc; }
+      color: #fff; }
       body header #navbar .nav-items li {
         display: inline-block;
         padding: 8px 16px;
         list-style-type: none; }
+  body #intro .alice {
+    color: #205298;
+    font: 2em; }
