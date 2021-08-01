@@ -1,4 +1,6 @@
 @import "fonts";
+@import "responsive-sizes";
+@import "responsive-styling";
 
 $primary-blue: #205298;
 $secondary-tan: #aa5f40;
@@ -20,10 +22,6 @@ h4,
 h5,
 p {
   color: $black;
-}
-
-.alice {
-  color: $secondary-tan;
 }
 
 #intro,
@@ -55,7 +53,7 @@ body {
       padding-right: 80px;
 
       .name-badge {
-        color: $d-accent;
+        color: $true-white;
         display: inline-block;
         padding: 8px 16px;
         font-family: $inter;
@@ -68,7 +66,7 @@ body {
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
-        color: $white;
+        color: $true-white;
 
         li {
           display: inline-block;
@@ -76,6 +74,13 @@ body {
           list-style-type: none;
         }
       }
+    }
+  }
+
+  #intro {
+    .alice {
+      color: $primary-blue;
+      font: 2em;
     }
   }
 }
