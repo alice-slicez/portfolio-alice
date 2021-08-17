@@ -1,86 +1,10 @@
 @import "fonts";
+@import "colours";
 @import "responsive-sizes";
 @import "responsive-styling";
-
-$primary-blue: #205298;
-$secondary-tan: #aa5f40;
-$white: #fcfcfc;
-$true-white: #fff;
-$black: #192029;
-$d-accent: #f3bd5e;
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-p {
-  color: $black;
-}
-
-#intro,
-#projects,
-#contact {
-  text-align: left;
-  padding: 2em 6em;
-}
-
-#projects {
-  background: #f4f5f6;
-}
-
-body {
-  background: $true-white;
-
-  header {
-    #navbar {
-      width: 100%;
-      padding: 16px 0;
-      background: $primary-blue;
-      display: inline-flex;
-      flex-direction: row;
-      flex-wrap: nowrap;
-      justify-content: space-between;
-      vertical-align: center;
-      max-height: 64px;
-      padding-left: 80px;
-      padding-right: 80px;
-
-      .name-badge {
-        color: $true-white;
-        display: inline-block;
-        padding: 8px 16px;
-        font-family: $inter;
-        font-size: 18px;
-      }
-
-      .nav-items {
-        margin: 0;
-        padding: 0;
-        display: flex;
-        flex-direction: row;
-        justify-content: flex-end;
-        color: $true-white;
-
-        li {
-          display: inline-block;
-          padding: 8px 16px;
-          list-style-type: none;
-        }
-      }
-    }
-  }
-
-  #intro {
-    .alice {
-      color: $primary-blue;
-      font: 2em;
-    }
-  }
 }
