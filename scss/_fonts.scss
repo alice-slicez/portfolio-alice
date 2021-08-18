@@ -6,6 +6,11 @@
 }
 
 @font-face {
+  font-family: "Aileron-Bold";
+  src: url("build/assets/fonts/Aileron-Bold.otf");
+}
+
+@font-face {
   font-family: "Aileron-Semibold";
   src: url("build/assets/fonts/Aileron-Semibold.otf");
 }
@@ -18,37 +23,37 @@
 $inter: "Inter", sans-serif;
 
 h1 {
-  font-size: 64px;
+  font-size: 4em;
   font-family: "Aileron-Black", sans-serif;
 }
 
 h2 {
-  font-size: 48px;
-  font-family: "Aileron-Black", sans-serif;
+  font-size: 3em;
+  font-family: "Aileron-Bold", sans-serif;
 }
 
 h3 {
-  font-size: 40px;
+  font-size: 2.5em;
   font-family: "Aileron-Semibold", sans-serif;
 }
 
 h4 {
-  font-size: 32px;
+  font-size: 2em;
   font-family: "Aileron-Semibold", sans-serif;
 }
 
 h5 {
-  font-size: 24px;
+  font-size: 1.5em;
   font-family: "Aileron-Regular", sans-serif;
   text-transform: uppercase;
 }
 
 p {
-  font-size: 16px;
+  font-size: 1em;
   font-family: $inter;
 }
 
 li {
-  font-size: 18px;
+  font-size: 1.125em;
   font-family: $inter;
 }

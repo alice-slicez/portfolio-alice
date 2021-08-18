@@ -4,6 +4,10 @@
   src: url("build/assets/fonts/Aileron-Black.otf"); }
 
 @font-face {
+  font-family: "Aileron-Bold";
+  src: url("build/assets/fonts/Aileron-Bold.otf"); }
+
+@font-face {
   font-family: "Aileron-Semibold";
   src: url("build/assets/fonts/Aileron-Semibold.otf"); }
 
@@ -12,32 +16,32 @@
   src: url("build/assets/fonts/Aileron-Regular.otf"); }
 
 h1 {
-  font-size: 64px;
+  font-size: 4em;
   font-family: "Aileron-Black", sans-serif; }
 
 h2 {
-  font-size: 48px;
-  font-family: "Aileron-Black", sans-serif; }
+  font-size: 3em;
+  font-family: "Aileron-Bold", sans-serif; }
 
 h3 {
-  font-size: 40px;
+  font-size: 2.5em;
   font-family: "Aileron-Semibold", sans-serif; }
 
 h4 {
-  font-size: 32px;
+  font-size: 2em;
   font-family: "Aileron-Semibold", sans-serif; }
 
 h5 {
-  font-size: 24px;
+  font-size: 1.5em;
   font-family: "Aileron-Regular", sans-serif;
   text-transform: uppercase; }
 
 p {
-  font-size: 16px;
+  font-size: 1em;
   font-family: "Inter", sans-serif; }
 
 li {
-  font-size: 18px;
+  font-size: 1.125em;
   font-family: "Inter", sans-serif; }
 
 h1,
@@ -50,6 +54,15 @@ p {
 
 body {
   background: #fff; }
+  body #projects {
+    background: #f4f5f6; }
+  body #project-background {
+    padding: 2em 6em; }
+
+footer {
+  padding: 2em 6em; }
+  footer p {
+    color: #535a65; }
 
 @media only screen and (min-width: 768px) {
   #intro,
@@ -57,8 +70,6 @@ body {
   #contact {
     text-align: left;
     padding: 2em 6em; }
-  #projects {
-    background: #f4f5f6; }
   body header #navbar {
     width: 100%;
     padding: 16px 0;
@@ -72,7 +83,7 @@ body {
     padding-left: 80px;
     padding-right: 80px; }
     body header #navbar .name-badge {
-      color: #fff;
+      color: #f3bd5e;
       display: inline-block;
       padding: 8px 16px;
       font-family: "Inter", sans-serif;
@@ -88,6 +99,10 @@ body {
         display: inline-block;
         padding: 8px 16px;
         list-style-type: none; }
+  body #intro {
+    padding-top: 4em; }
+    body #intro #alice {
+      color: #205298; }
   body #projects {
     width: 100%;
     display: inline-flex;
