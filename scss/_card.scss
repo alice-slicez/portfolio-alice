@@ -1,0 +1,94 @@
+//resource for card: https://codepen.io/peopleoff/pen/KaZbbo
+
+.card {
+  background: $true-white;
+  border-radius: 0.5em;
+  min-height: 400px;
+  width: 25%;
+  transition: 0.6s all ease;
+  margin: 1em;
+  margin-left: 0;
+
+  .cardTop {
+    min-height: 224px;
+    border-radius: 0.5em 0.5em 0em 0em;
+    transition: 0.4s all ease;
+    height: 65%;
+  }
+
+  .cardBottom {
+    height: 35%;
+    transition: 0.4s all ease;
+  }
+
+  .cardText {
+    min-height: 100%;
+    padding: 20px;
+  }
+
+  .cardTitle {
+    font-family: "Aileron-Semibold", sans-serif;
+    font-size: 1.5em;
+    font-weight: 600;
+    line-height: 108%;
+  }
+
+  .cardInfo {
+    padding-top: 1em;
+    font-family: $inter;
+    font-size: 0.875em;
+    font-weight: 500;
+    color: $dark-gray;
+  }
+
+  .cardProjectTags {
+    color: $secondary-tan;
+    font-family: "Aileron-Semibold", sans-serif;
+    font-size: 0.75em;
+    font-weight: 600;
+    text-transform: uppercase;
+    padding-top: 2em;
+  }
+
+  /* Hover effects */
+  &:hover {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+
+    .cardBottom {
+      transition: 0.4s all ease;
+      opacity: 1;
+    }
+    .cardTop {
+      transition: 0.4s all ease;
+      opacity: 0.8;
+    }
+  }
+}
+
+//thumbnails
+#timeless {
+  .cardTop {
+    background: url("/build/assets/img/timeless-thumbnail.png") no-repeat;
+    background-origin: padding-box;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+#tnt {
+  .cardTop {
+    background: url("/build/assets/img/tnt-thumbnail.png") no-repeat;
+    background-origin: padding-box;
+    background-position: center;
+    background-size: cover;
+  }
+}
+
+#notes {
+  .cardTop {
+    background: url("/build/assets/img/notes-thumbnail.png") no-repeat;
+    background-origin: padding-box;
+    background-position: center;
+    background-size: cover;
+  }
+}
