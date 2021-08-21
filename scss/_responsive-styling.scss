@@ -12,6 +12,7 @@ body {
   #contact {
     #contact-info-list {
       margin-top: 2em;
+      margin-bottom: 4em;
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
@@ -73,11 +74,14 @@ footer {
         padding-right: 80px;
 
         .name-badge {
-          color: $d-accent;
           display: inline-block;
           padding: 8px 16px;
           font-family: $inter;
           font-size: 18px;
+          a {
+            color: $d-accent;
+            text-decoration: none;
+          }
         }
 
         .nav-items {
@@ -86,12 +90,20 @@ footer {
           display: flex;
           flex-direction: row;
           justify-content: flex-end;
-          color: $true-white;
 
           li {
             display: inline-block;
             padding: 8px 16px;
             list-style-type: none;
+
+            a {
+              text-decoration: none;
+              color: $true-white;
+              &:hover {
+                text-decoration: underline;
+                color: $true-white;
+              }
+            }
           }
         }
       }
