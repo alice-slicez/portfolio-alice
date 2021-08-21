@@ -9,6 +9,24 @@ body {
   #project-background {
     padding: 2em 6em;
   }
+  #contact {
+    #contact-info-list {
+      margin-top: 2em;
+      display: flex;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      justify-content: flex-start;
+      list-style-type: none;
+
+      .contact-item {
+        margin-right: 1em;
+        &:hover {
+          filter: contrast(1.75);
+          filter: hue-rotate(15deg);
+        }
+      }
+    }
+  }
 }
 
 footer {
