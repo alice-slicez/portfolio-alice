@@ -58,6 +58,18 @@ body {
     background: #f4f5f6; }
   body #project-background {
     padding: 2em 6em; }
+  body #contact #contact-info-list {
+    margin-top: 2em;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+    list-style-type: none; }
+    body #contact #contact-info-list .contact-item {
+      margin-right: 1em; }
+      body #contact #contact-info-list .contact-item:hover {
+        filter: contrast(1.75);
+        filter: hue-rotate(15deg); }
 
 footer {
   padding: 2em 6em; }
@@ -163,19 +175,19 @@ footer {
       opacity: 0.8; }
 
 #timeless .cardTop {
-  background: url("/build/assets/img/timeless-thumbnail.png") no-repeat;
+  background: url("../assets/img/timeless-thumbnail.png") no-repeat;
   background-origin: padding-box;
   background-position: center;
   background-size: cover; }
 
 #tnt .cardTop {
-  background: url("/build/assets/img/tnt-thumbnail.png") no-repeat;
+  background: url("../assets/img/tnt-thumbnail.png") no-repeat;
   background-origin: padding-box;
   background-position: center;
   background-size: cover; }
 
 #notes .cardTop {
-  background: url("/build/assets/img/notes-thumbnail.png") no-repeat;
+  background: url("../assets/img/notes-thumbnail.png") no-repeat;
   background-origin: padding-box;
   background-position: center;
   background-size: cover; }
