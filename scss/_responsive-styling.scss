@@ -28,6 +28,13 @@ body {
       }
     }
   }
+  .project-container {
+    .project-contents {
+      .highlight {
+        background-color: $d-accent;
+      }
+    }
+  }
 }
 
 footer {
@@ -121,6 +128,10 @@ footer {
       flex-direction: row;
       align-items: flex-start;
       justify-content: flex-start;
+    }
+
+    .project-section {
+      padding-bottom: 3em;
     }
   }
 }

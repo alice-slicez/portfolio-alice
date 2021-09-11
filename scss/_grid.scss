@@ -1,0 +1,31 @@
+body {
+  .project-container {
+    display: grid;
+    grid-template-columns: 20% 80%;
+    grid-auto-flow: row;
+    column-gap: 8px;
+    align-items: start;
+    padding: 4em 6em;
+
+    .project-toc {
+      min-height: 64px;
+      margin-right: 2em;
+      position: sticky;
+    }
+
+    .project-contents {
+      p {
+        line-height: 1.5;
+      }
+      h2 {
+        padding-bottom: 0.25em;
+      }
+      .project-title {
+        padding-bottom: 0.25em;
+      }
+      .project-subtitle {
+        padding-bottom: 3em;
+      }
+    }
+  }
+}
