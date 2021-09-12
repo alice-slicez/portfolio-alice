@@ -6,7 +6,6 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <link rel="stylesheet" href="css/main.css">
     <title>Design by Alice Zhang</title>
-
 </head>
 <body>
     <header>
@@ -14,20 +13,151 @@
             <div class="name-badge"><strong><a href="index.html">Alice Zhang</a></strong></div>
             <ul class="nav-items">
                 <li><a href="assets/Resume_AliceZhang.pdf" target=_blank rel=noreferrer noopener>Resume</a></li>
-                <li><a href="#projects">Work</a></li>
+                <li><a href="index.html#projects">Work</a></li>
                 <li><a href="index.html#contact">Contact</a></li>
             </ul>
         </nav>
     </header>
-    <h1>Note Annotation - E-Reading</h1>
-    <p>💻 UX Design, Product research, Prototyping</p>
-    <p>🛠 Figma, video conference presentation</p>
-    <p>💼 Feature for development sprint</p>
-    <section id="project-background">
-        <p>Sticky notes is a design feature for the company’s flagship web-based reader. 
-            The reader is rapidly developing to better accommodate online learning and 
-            adapt to the unprecedented educational landscape of the COVID-19 pandemic. </p>
-    </section>
+
+    <div class="project-container">
+        <div class="project-toc">
+            <p>process</p>
+            <ol class="project-toc-process">
+                <li><a href="#overview-notes">Overview</a></li>
+                <li><a href="#inspiration-notes">Inspiration</a></li>
+                <li><a href="#myrole-notes">My Role</a></li>
+                <li><a href="#initial-findings-notes">Initial Findings</a></li>
+                <li><a href="#ideation-notes">Ideation</a></li>
+                <li><a href="#improvement-notes">Improvements</a></li>
+                <li><a href="#final-notes">Final Iteration</a></li>
+                <li><a href="#takeaways-notes">Takeaways</a></li>
+
+            </ol>
+        </div>
+        <div class="project-contents">
+            <h1 class="project-title">Sticky Notes Annotation for E-Reading</h1>
+            <div class="project-subtitle">
+                <p>💻 UX Design, Product research, Prototyping</p>
+                <p>🛠️ Figma, video conference presentation</p>
+                <p>💼 Feature for development sprint</p>
+            </div>
+            <section id="overview-notes" class="project-section">
+                <h2>Overview</h2>
+                <p>Sticky notes is a design feature for the company’s flagship web-based reader. 
+                    The reader is rapidly developing to better accommodate online learning and 
+                    adapt to the unprecedented educational landscape of the COVID-19 pandemic.
+                </p>
+                <div class="image-holder">
+                    <a href="./assets/img/notes-overview.png" target=_blank rel=noreferrer noopener>
+                        <img src="./assets/img/notes-overview.png" alt="screenshot of note annotation on a digital textbook">
+                    </a>
+                </div>
+            </section>
+            <section id="inspiration-notes" class="project-section">
+                <h2>Inspiration</h2>
+                <p>One of our clients wanted an annotation feature where students can write notes for themselves. The notes would always present on top of text and draggable across the page. Along with the design team, upper management decided to revisit the current version of sticky notes and make improvements.</p>
+            </section>
+            <section id="myrole-notes" class="project-section">
+                <h2>My Role</h2>
+                <ol>
+                    <li>Research sticky notes equivalents in other contexts to better understand how to improve the current sticky notes feature by adding new features and adjusting existing features.</li>
+                    <li>Design a set of mockups showing a new iteration of sticky notes and display it in all states in a reader mockup</li>
+                </ol>
+            </section>
+            <section id="initial-findings-notes" class="project-section">
+                <h2>Initial Findings</h2>
+                <p>I did a quick audit with the current version of sticky notes and managed to find both visual and usability problems.</p>
+                <div class="image-holder"> 
+                    <a href="./assets/img/notes-original.png" target=_blank rel=noreferrer noopener>
+                        <img src="./assets/img/notes-original.png" alt="screenshot of note annotation on a digital textbook before changes were made">
+                    </a>
+                    <p class="caption">Since there is no minimum size for the note, the user could create a note so small that it becomes very difficult to see what they are writing.</p>
+                </div>
+                <p>Visual Challenges</p>
+                <ul>
+                    <li>Icon on the left toolbar does not resemble a sticky note.</li>
+                    <li>Not unified with the reader's overall design.</li>
+                    <li>Editing tools are too visually far from the actual sticky note.</li>
+                    <li>No minimum size for the input area.</li>
+                    <li>Can make sticky notes any size --> leads to usability problems.</li>
+                </ul>
+                <div class="image-holder">
+                    <a href="./assets/img/notes-originalwtext.png" target=_blank rel=noreferrer noopener>
+                        <img src="./assets/img/notes-originalwtext.png" alt="screenshot of note annotation on a digital textbook">
+                    </a>
+                </div>
+                <p><span class="highlight">Top Usability Challenges</span> 💡</p>
+                <ul>
+                    <li>Absence of minimum sticky note size causes problems with visibility of input text and accessibility of editing tools.</li>
+                    <li>Need editing functionality that can help the user personalize how they use the sticky notes in their books.</li>
+                </ul>
+            </section>
+            <section id="ideation-notes" class="project-section">
+                <h2>Ideation</h2>
+                <p>To get an idea on improving the current version of sticky notes, I researched the sticky notes on different operating systems and noted specific functionalities that I wanted to transfer to sticky notes in the reader</p>
+                <p>Apple OS --> Toggle minimize/default/maximize</p>
+                <p>Linux OS --> Lock a note</p>
+                <p>Windows OS --> pressing X closes the note instead of deleting it</p>
+                <div class="image-holder">
+                    <a href="./assets/img/notes-apple.png" target=_blank rel=noreferrer noopener>
+                        <img src="./assets/img/notes-apple.png" alt="apple os notes">
+                    </a>
+                </div>
+                <div class="image-holder">
+                    <a href="./assets/img/notes-linux.png" target=_blank rel=noreferrer noopener>
+                        <img src="./assets/img/notes-linux.png" alt="apple os notes">
+                    </a>
+                </div>
+                <div class="image-holder">
+                    <a href="./assets/img/notes-windows.png" target=_blank rel=noreferrer noopener>
+                        <img src="./assets/img/notes-windows.png" alt="apple os notes">
+                    </a>
+                </div>
+            </section>
+            <section id="improvement-notes" class="project-section">
+                <h2>Product Improvement</h2>
+                <p>My teammate did previous groundwork on the sticky notes, so I built upon that work by including the minimize and lock features. To address the previous dimension problem, it was decided that the note will be sandwiched between a top and bottom area, 48px tall each, which will support the editing/deletion buttons and note colours. When creating a note, the initial input area height will be enough for two lines of text.</p>
+                <div class="image-holder">
+                    <a href="./assets/img/notes-improvement.png" target=_blank rel=noreferrer noopener>
+                        <img src="./assets/img/notes-improvement.png" alt="improved version of notes">
+                    </a>
+                </div>
+                <p>Another design I created includes a feature to lock the note to prevent accidental editing, and the ability to minimize a note in case the user wanted to focus on reading. In this design, the delete functionality is within editing mode.</p>
+                <div class="image-holder">
+                    <a href="./assets/img/notes-altversion.png" target=_blank rel=noreferrer noopener>
+                        <img src="./assets/img/notes-altversion.png" alt="alternative design for notes with minimize and lock functions">
+                    </a>
+                </div>
+            </section>
+            <section id="final-notes" class="project-section">
+                <h2>Final Iteration</h2>
+                <p>After presenting the above designs, the decision was made to keep the note simple without the lock and minimize feature, as it was too early to implement them. We were also uncertain if they would be useful, as most of our users who utilized notes liked to keep them open.</p>
+                <div class="image-holder">                    
+                    <a href="./assets/img/notes-final.png" target=_blank rel=noreferrer noopener>
+                        <img src="./assets/img/notes-final.png" alt="final iteration of notes">
+                    </a>
+                </div>
+                <p>As the previous UI cluttered the editing and deletion tools, the decision was to make a single floating action button that changes functionality depending on the note’s state. Rich text tools were implemented to support accessibility needs, such as font size. Due to the need for more icons, the colour selection menu was redesigned to expand out.</p>
+                <div class="image-holder">
+                    <a href="./assets/img/notes-finaledit.png" target=_blank rel=noreferrer noopener>
+                        <img src="./assets/img/notes-finaledit.png" alt="alternative design for notes with minimize and lock functions">
+                    </a>
+                    <p class="caption">Along with conventional colours, a dark and sepia option are available for the note to accommodate accessibility needs.</p>
+                </div>
+            </section>
+            <section id="takeaways-notes" class="project-section">
+                <h2>Takeaways</h2>
+                <p>The above mockups were proposed to clients in a Zoom meeting, and they felt positively about the direction that sticky notes were going. They recommended an article about the usability research done on note-taking, which I plan to draw knowledge from when working on future iterations.</p>
+                <p>Future plans for sticky notes include the desire to have them privacy-scoped to specifically individual users, other students, and teachers. If we make this feature available to different clients, we could also implement their branding colours as background colours for the notes.</p>
+                <div class="image-holder">
+                    <a href="./assets/img/notes-takeaway.png" target=_blank rel=noreferrer noopener>
+                        <img src="./assets/img/notes-takeaway.png" alt="final iteration of 3 notes displayed in a textbook">
+                    </a>
+                </div>                
+            </section>
+            <p><a href="index.html">Back to Home</a></p>
+        </div>
+    </div>
 </body>
 
 <footer>
