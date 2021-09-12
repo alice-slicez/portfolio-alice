@@ -43,6 +43,9 @@ p {
   font-family: "Aileron-Regular";
   src: url("build/assets/fonts/Aileron-Regular.otf"); }
 
+*:focus {
+  outline: none; }
+
 h1 {
   font-size: 4rem;
   font-family: "Aileron-Black", sans-serif; }
@@ -70,6 +73,8 @@ p {
 
 a {
   color: #205298; }
+  a:hover, a:focus {
+    color: #002a69; }
 
 li {
   font-size: 1.125rem;
@@ -79,21 +84,33 @@ body .project-container .project-subtitle p {
   color: #535a65; }
 
 body .project-container .project-toc {
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  box-sizing: border-box;
-  padding-top: 1em; }
+  counter-reset: ol-num-counter; }
   body .project-container .project-toc p {
     font-family: "Aileron-Semibold", sans-serif;
     font-size: 0.75rem;
     color: #535a65;
     text-transform: uppercase;
     padding-bottom: 2em; }
-  body .project-container .project-toc .project-toc-process li {
-    color: #627084;
-    padding-bottom: 0.75em;
-    font-size: 1rem; }
+  body .project-container .project-toc .project-toc-process {
+    list-style: none;
+    counter-reset: ol-num-counter; }
+    body .project-container .project-toc .project-toc-process li {
+      padding-bottom: 1em;
+      counter-increment: ol-num-counter; }
+      body .project-container .project-toc .project-toc-process li:before {
+        content: counter(ol-num-counter) ". ";
+        font-size: 1rem;
+        color: #627084; }
+      body .project-container .project-toc .project-toc-process li a {
+        text-decoration: none;
+        color: #627084;
+        margin-bottom: 0.75em;
+        font-size: 1rem; }
+        body .project-container .project-toc .project-toc-process li a:hover, body .project-container .project-toc .project-toc-process li a:focus {
+          color: #205298;
+          font-weight: bolder; }
+        body .project-container .project-toc .project-toc-process li a:pressed {
+          color: #205298; }
 
 body {
   background: #fff; }
@@ -114,8 +131,28 @@ body {
       body #contact #contact-info-list .contact-item:hover {
         filter: contrast(1.75);
         filter: hue-rotate(15deg); }
+  body .project-container .project-toc {
+    position: sticky;
+    top: 8em;
+    align-self: start;
+    height: 100vh;
+    box-sizing: border-box;
+    padding-top: 1em; }
   body .project-container .project-contents .highlight {
     background-color: #f3bd5e; }
+  body .project-container .project-contents .image-holder {
+    padding: 1.5em 0;
+    max-width: fit-content;
+    text-decoration: none; }
+    body .project-container .project-contents .image-holder img {
+      max-width: 75%;
+      height: auto;
+      border-radius: 4px;
+      text-decoration: none; }
+      body .project-container .project-contents .image-holder img:focus {
+        border: 8px solid #205298; }
+      body .project-container .project-contents .image-holder img:hover {
+        filter: opacity(0.8); }
 
 footer {
   padding: 2em 6em; }

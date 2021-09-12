@@ -29,9 +29,34 @@ body {
     }
   }
   .project-container {
+    .project-toc {
+      position: sticky;
+      top: 8em;
+      align-self: start;
+      height: 100vh;
+      box-sizing: border-box;
+      padding-top: 1em;
+    }
     .project-contents {
       .highlight {
         background-color: $d-accent;
+      }
+      .image-holder {
+        padding: 1.5em 0;
+        max-width: fit-content;
+        text-decoration: none;
+        img {
+          max-width: 75%;
+          height: auto;
+          border-radius: 4px;
+          text-decoration: none;
+          &:focus {
+            border: 8px solid $primary-blue;
+          }
+          &:hover {
+            filter: opacity(0.8);
+          }
+        }
       }
     }
   }

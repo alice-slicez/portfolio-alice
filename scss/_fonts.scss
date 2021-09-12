@@ -22,6 +22,12 @@
 
 $inter: "Inter", sans-serif;
 
+* {
+  &:focus {
+    outline: none;
+  }
+}
+
 h1 {
   font-size: 4rem;
   font-family: "Aileron-Black", sans-serif;
@@ -55,6 +61,10 @@ p {
 
 a {
   color: $primary-blue;
+  &:hover,
+  &:focus {
+    color: $primary-hover;
+  }
 }
 
 li {
@@ -71,11 +81,7 @@ body {
       }
     }
     .project-toc {
-      position: sticky;
-      top: 0;
-      height: 100vh;
-      box-sizing: border-box;
-      padding-top: 1em;
+      counter-reset: ol-num-counter;
 
       p {
         font-family: "Aileron-Semibold", sans-serif;
@@ -84,13 +90,33 @@ body {
         text-transform: uppercase;
         padding-bottom: 2em;
       }
-      //active state is $primary-blue
 
       .project-toc-process {
+        list-style: none;
+        counter-reset: ol-num-counter;
+
         li {
-          color: $gray;
-          padding-bottom: 0.75em;
-          font-size: 1rem;
+          padding-bottom: 1em;
+          counter-increment: ol-num-counter;
+          &:before {
+            content: counter(ol-num-counter) ". ";
+            font-size: 1rem;
+            color: $gray;
+          }
+          a {
+            text-decoration: none;
+            color: $gray;
+            margin-bottom: 0.75em;
+            font-size: 1rem;
+            &:hover,
+            &:focus {
+              color: $primary-blue;
+              font-weight: bolder;
+            }
+            &:pressed {
+              color: $primary-blue;
+            }
+          }
         }
       }
     }
