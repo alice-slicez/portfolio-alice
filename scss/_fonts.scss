@@ -54,22 +54,24 @@ h5 {
   text-transform: uppercase;
 }
 
-p {
+p,
+ol,
+ul,
+li {
   font-size: 1rem;
   font-family: $inter;
+  padding-bottom: 1em;
+  color: $black;
 }
 
 a {
   color: $primary-blue;
+  text-decoration: none;
   &:hover,
   &:focus {
     color: $primary-hover;
+    text-decoration: underline;
   }
-}
-
-li {
-  font-size: 1.125rem;
-  font-family: $inter;
 }
 
 //project TOC fonts
@@ -78,6 +80,7 @@ body {
     .project-subtitle {
       p {
         color: $dark-gray;
+        padding-bottom: 0.25em;
       }
     }
     .project-toc {
@@ -96,6 +99,8 @@ body {
         counter-reset: ol-num-counter;
 
         li {
+          font-size: 1.125rem;
+          font-family: $inter;
           padding-bottom: 1em;
           counter-increment: ol-num-counter;
           &:before {
@@ -104,20 +109,27 @@ body {
             color: $gray;
           }
           a {
-            text-decoration: none;
             color: $gray;
             margin-bottom: 0.75em;
             font-size: 1rem;
             &:hover,
             &:focus {
-              color: $primary-blue;
-              font-weight: bolder;
+              color: $black;
             }
             &:pressed {
               color: $primary-blue;
             }
           }
         }
+      }
+    }
+  }
+  .project-contents {
+    .image-holder {
+      .caption {
+        color: $dark-gray;
+        font-size: 0.8125rem; //13px
+        line-height: 1.5;
       }
     }
   }
