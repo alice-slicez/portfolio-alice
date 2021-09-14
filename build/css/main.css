@@ -71,7 +71,10 @@ h5 {
 p,
 ol,
 ul,
-li {
+li,
+details,
+details > summary,
+details > p details[open] > summary {
   font-size: 1rem;
   font-family: "Inter", sans-serif;
   padding-bottom: 1em;
@@ -163,6 +166,17 @@ body {
         border: 8px solid #205298; }
       body .project-container .project-contents .image-holder img:hover {
         filter: opacity(0.8); }
+  body .project-container .project-contents details {
+    background-color: #eeeff1;
+    margin: 1em;
+    margin-left: 0; }
+    body .project-container .project-contents details summary,
+    body .project-container .project-contents details ul {
+      padding-top: 1em;
+      padding-left: 1em;
+      margin: 0 1em; }
+  body .project-container .project-contents details > summary:first-of-type {
+    padding-bottom: 0; }
 
 footer {
   padding: 2em 6em; }

@@ -1,16 +1,101 @@
 <!DOCTYPE html>
-<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">    
     <link rel="stylesheet" href="css/main.css">
-    <title>T&T Website Redesign - Design by Alice Zhang</title>
+    <title>T&T Online Experience Redesign - Design by Alice Zhang</title>
 </head>
 <body>
-    <h1>T&T Website Redesign</h1>
+    <header>
+        <nav id="navbar">
+            <div class="name-badge"><strong><a href="index.html">Alice Zhang</a></strong></div>
+            <ul class="nav-items">
+                <li><a href="assets/Resume_AliceZhang.pdf" target=_blank rel=noreferrer noopener>Resume</a></li>
+                <li><a href="index.html#projects">Work</a></li>
+                <li><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="project-container">
+        <div class="project-toc">
+            <p>process</p>
+            <ol class="project-toc-process">
+                <li><a href="#overview-notes">Overview</a></li>
+                <li><a href="#inspiration-notes">Inspiration</a></li>
+                <li><a href="#myrole-notes">My Role</a></li>
+                <li><a href="#initial-findings-notes">Initial Findings</a></li>
+                <li><a href="#ideation-notes">Ideation</a></li>
+                <li><a href="#improvement-notes">Improvements</a></li>
+                <li><a href="#final-notes">Final Iteration</a></li>
+                <li><a href="#takeaways-notes">Takeaways</a></li>
+
+            </ol>
+        </div>
+        <div class="project-contents">
+            <h1 class="project-title">T&T Online Shopping Experience Improvement</h1>
+            <div class="project-subtitle">
+                <p>💻 Case Study, UX Design, UI Design, User Testing</p>
+                <p>🛠️ Figma, Photoshop, UsabilityHub</p>
+                <p>💼 Submission to UX Design Contest 13, solo project</p>
+            </div>
+            <section id="overview-tnt" class="project-section">
+                <h2>Overview</h2>
+                <p>In this case study for the <a href="https://uxdesigncontest.com/contests/ux-design-contest-13.html">UX Design Contest 13</a>, I discovered and prioritized usability issues on the T&T Supermarket Grocery Delivery process on their desktop website. I have proposed two improvements to clarify the process of arriving at the shopping page, to distinguish between delivery and pickup, and to easily use the shopping cart.</p>
+                <p>T&T Supermarket is a Canadian grocer selling Asian-imported goods. Most of T&T's clientele are of Asian descent, and a number of them shop at T&T as they face a language barrier with most western grocery stores.</p>
+                <p>I chose to improve T&T’s website because the large Asian-Canadian population in Vancouver often rely on T&T's services, be it for a celebration cake or a weekday dinner. With the pandemic, a large number of T&T's customers will opt to use the online delivery service. Whether it is in English, Simplified Chinese, or Traditional Chinese, improvements in the website's usability will help customers of all ages and language abilities to find what they need with ease. From a business perspective, this is a strategy to maintain customer loyalty of those who prefer Asian grocers.</p>
+            </section>
+            <section id="usabilityissues-tnt" class="project-section">
+                <h2>Identifying Usability Issues</h2>
+                <p>To identify usability issues, I went to the <a href="https://www.tntsupermarket.com/">T&T supermarket website</a> and went through the process of adding items to my cart until the final checkout screen.</p>
+                <details> 
+                    <summary>List of Found Usability Issues</summary>
+                    <ul>
+                        <li>Default language upon first landing screen is not in English in a province where the first expected language of a website is English</li>
+                        <li>Language selection screen not distinct enough - too much cognitive load to make it share a modal with the address input field</li>
+                        <li>Lack of iconography in modal - address field has no location icon indicating what it does - takes more time for user to read</li>
+                        <li>Loading animation is awkwardly positioned inside the language and address modal</li>
+                        <li>It is not a conventional loading icon - might confuse some users, but this is a nitpick</li>
+                        <li>Address should be in its own modal</li>
+                        <li>asks for specific address at first - too demanding of user commitment - Ideally the website would ask permission to use the user&#x27;s location</li>
+                        <li>but if not, there could be a field to select a province</li>
+                        <li>after province is selected, move on to city</li>
+                        <li>Even after asking for address, it lacks customization in showing information about the closest T&amp;T locations permissible for delivery</li>
+                        <li>Sliding images on the &quot;hero area&quot; banner distracting</li>
+                        <li>Only one or two of these images are about COVID-19 notices. Rest are about promotions. As an essential business, the COVID-19 should be the clearest thing the user sees initially</li>
+                        <li>Sliding text on top distracting</li>
+                        <li>Is about promotions but without an image it&#x27;s meaningless</li>
+                        <li>Home page categories - pills have too many ampersands. More pills per section &gt; &quot;Rice &amp; Oils &amp; Flour&quot;</li>
+                        <li>UI has poor legibility overall</li>
+                        <li>Three navbars on the top feel cluttered</li>
+                        <li>No clear CTA on how to start adding groceries to cart</li>
+                        <li>Poor wording on &quot;Click and Collect&quot;. It actually meant pickup in store - some kind of reservation system</li>
+                        <li>Pickup address does not show in a visible place after it is saved</li>
+                        <li>Delivery for Home only shows limited goods in its list - most goods (produce, seafood, etc) are found under &quot;Click and Collect&quot;</li>
+                        <li>Search bar results show too many details.</li>
+                        <li>Location of search bar makes it unclear to scope. Am I searching through the catalogue of goods, or does it encompass more?</li>
+                        <li>Absence of filtering system for search bar</li>
+                        <li>Categorization for Delivery for Home items unclear</li>
+                        <li>also lacking in important information. Does the user care about brand and price? Is it important to see if the item is out of stock?</li>
+                        <li>Minimal or absence of rating information for several products - unnecessary to show rating in listings page</li>
+                        <li>Awkward positioning for &quot;Added to Cart&quot; notification. The element on the page not strong enough to call attention. </li>
+                        <li>Viewing cart items and going to checkout are two separate pages</li>
+                        <li>Can only remove items on the cart page</li>
+                        <li>Cannot see list of items already added to cart without leaving the page currently being browsed</li>
+                        <li>Chat button is awkwardly positioned</li>
+                    </ul>
+                </details>
+                <details>
+                    <summary>Here are issues specific to logging in and checkout</summary>
+           </summary>
+                </details>         
+            </section>
+            
+            <p><a href="index.html">Back to Home</a></p>
+        </div>
+    </div>
 </body>
 <footer>
-    <p>Copyright Alice Zhang, 2021. </p>
+<p>Copyright Alice Zhang, 2021. </p>
 </footer>
-</html>

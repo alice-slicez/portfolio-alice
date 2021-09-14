@@ -57,7 +57,10 @@ h5 {
 p,
 ol,
 ul,
-li {
+li,
+details,
+details > summary,
+details > p details[open] > summary {
   font-size: 1rem;
   font-family: $inter;
   padding-bottom: 1em;

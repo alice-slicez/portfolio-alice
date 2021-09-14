@@ -58,6 +58,22 @@ body {
           }
         }
       }
+      details {
+        background-color: $off-white;
+        margin: 1em;
+        margin-left: 0;
+        summary,
+        ul {
+          padding-top: 1em;
+          padding-left: 1em;
+          margin: 0 1em;
+        }
+      }
+      details > summary {
+        &:first-of-type {
+          padding-bottom: 0;
+        }
+      }
     }
   }
 }
