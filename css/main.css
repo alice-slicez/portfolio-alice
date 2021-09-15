@@ -150,9 +150,12 @@ body {
     list-style-type: none; }
     body #contact #contact-info-list .contact-item {
       margin-right: 1em; }
-      body #contact #contact-info-list .contact-item:hover {
-        filter: contrast(1.75);
-        filter: hue-rotate(15deg); }
+      body #contact #contact-info-list .contact-item img {
+        filter: contrast(125%); }
+        body #contact #contact-info-list .contact-item img:hover {
+          border-radius: 100%;
+          box-shadow: 0 5px 15px rgba(0, 42, 105, 0.6);
+          transition: 0.4s all ease; }
   body .project-container .project-toc {
     position: sticky;
     top: 8em;
