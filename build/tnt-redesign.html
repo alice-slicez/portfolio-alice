@@ -22,15 +22,13 @@
         <div class="project-toc">
             <p>process</p>
             <ol class="project-toc-process">
-                <li><a href="#overview-notes">Overview</a></li>
-                <li><a href="#inspiration-notes">Inspiration</a></li>
-                <li><a href="#myrole-notes">My Role</a></li>
-                <li><a href="#initial-findings-notes">Initial Findings</a></li>
-                <li><a href="#ideation-notes">Ideation</a></li>
-                <li><a href="#improvement-notes">Improvements</a></li>
-                <li><a href="#final-notes">Final Iteration</a></li>
-                <li><a href="#takeaways-notes">Takeaways</a></li>
-
+                <li><a href="#overview-tnt">Overview</a></li>
+                <li><a href="#usabilityissues-tnt">Identifying Usability Issues</a></li>
+                <li><a href="#designconcepts-tnt">Design Concepts</a></li>
+                <li><a href="#finaldesignconcept-tnt">Final Design Concepts</a></li>
+                <li><a href="#testing-tnt">Testing and Results</a></li>
+                <li><a href="#recommendations-tnt">Recommendations for T&T Supermarket</a></li>
+                <li><a href="#future-tnt">Future Considerations</a></li>
             </ol>
         </div>
         <div class="project-contents">
@@ -52,7 +50,7 @@
                 <details> 
                     <summary>List of Found Usability Issues</summary>
                     <ul>
-                        <li>Default language upon first landing screen is not in English in a province where the first expected language of a website is English</li>
+                        <li>Default language upon first landing screen is not in English in a country where usually, the first expected language of a website is English</li>
                         <li>Language selection screen not distinct enough - too much cognitive load to make it share a modal with the address input field</li>
                         <li>Lack of iconography in modal - address field has no location icon indicating what it does - takes more time for user to read</li>
                         <li>Loading animation is awkwardly positioned inside the language and address modal</li>
@@ -87,11 +85,158 @@
                     </ul>
                 </details>
                 <details>
-                    <summary>Here are issues specific to logging in and checkout</summary>
-           </summary>
-                </details>         
+                    <summary>Issues specific to logging in and checkout</summary>
+                    <ul>
+                        <li>the option to log in with social media only includes Google and Facebook, which doesn't accommodate users who prefer social media platforms popular in Asia such as WeChat or Line</li>
+                        <li>Wechat has its own payment function, which should be considered</li>
+                        <li>Must log in to check out - an essential business shouldn't demand a heavy commitment for their services during a pandemic</li>
+                        <li>Checkout screen asks for first name, last name, phone number - should already know this if user is signed in to their account</li>
+                        <li>Checkout screen is in a modal that takes up the entire screen - takes the user's attention away from contextual information
+                            <div class="image-holder">
+                                <a href="./assets/img/tnt-loginproblem.png" target=_blank rel=noreferrer noopener>
+                                    <img src="./assets/img/tnt-loginproblem.png" alt="usability problem with login screen of T&T website">
+                                </a>
+                            </div>
+                        </li>
+                        <li>Insufficient payment platforms available - If Alipay and Wechat pay are supported, the payment methods that are typically accepted in North America (PayPal, Google Pay) should be accepted too - especially since user can log in with Google</li>
+                        <li>"Buy More Save More" image on the checkout page is not indicative of function, doesn't imply where  user is going after they click the button to leave that page
+                            <div class="image-holder">
+                                <a href="./assets/img/tnt-buymoreimage.png" target=_blank rel=noreferrer noopener>
+                                    <img src="./assets/img/tnt-buymoreimage.png" alt="image of a cartoon with the words buy more save more that is a pointless addition to the UI">
+                                </a>
+                            </div>
+                        </li>
+                    </ul>
+                <p class="summary-subtitle">Most of the issues I found were related to the first on-boarding steps and in the procedure of adding items to the shopping cart. In summary, the issues are:</p>
+                <ul>
+                    <li>On-boarding process lacks structure - asks for too much information at once</li>
+                    <li>Lack of customization to user needs following the request for a specific delivery address</li>
+                    <li>Unclear navigation to shopping page(s)</li>
+                    <li>Lack of differentiation between deliverable and pick-up only items</li>
+                    <li>Cannot see list of items in cart without leaving current shopping page</li>
+                </ul>
+                </details>
+                <details>
+                    <summary>Prioritizing Usability Issues</summary>
+                    <p>Because most of the usability issues I found initially were higher-order issues with significant impact on the user experience, I focused on some major usability issues over minor design issues in the categorization below. </p>
+                    <div class="iframe-holder">
+                        <iframe src="./tnt-subpages/tnt-topusabilityissues.html" title="T&T Website Redesign Top Usability Issues Table" frameborder="0" allowfullscreen width="100%" height="100%">
+                        </iframe>
+                    </div>
+                    <p>After filtering out the high impact issues, it appears that the most important issues are part of either the on-boarding or the shopping procedure. </p>
+                    <ol>
+                        <li>On-boarding process lacks structure - asks for too much information at once</li>
+                        <li>Unclear navigation to shopping page(s)</li>
+                        <li>Cannot see list of items in cart without leaving current shopping page</li>
+                    </ol>
+                    <p><span class="highlight">Top Issue: Improve clarity in accessing user customization, which reduces cognitive load in finding desired items.</span></p>
+                    <p>I decided to improve the shopping navigation and customization of shopping items, as it is the core of the online shopping experience. This was chosen over the on-boarding process because the shopping experience should be solid, no matter the display language, Delivery address is in already in a visible area, allowing it to be easily changed.</p>
+                    <p>Current designs</p>
+                    <div class="image-holder">
+                        <a href="./assets/img/tnt-landingbefore.png" target=_blank rel=noreferrer noopener>
+                            <img src="./assets/img/tnt-landingbefore.png" alt="the T&T website landing page in May 2020">
+                        </a>
+                        <p class="caption">This current landing page design prioritizes in-store promotions. Navigation to grocery items is unclear and important notices are not given enough hierarchy on the page.</p>
+                    </div>
+                    <div class="image-holder">
+                        <a href="./assets/img/tnt-shoppingpagebefore.png" target=_blank rel=noreferrer noopener>
+                            <img src="./assets/img/tnt-shoppingpagebefore.png" alt="the T&T website shopping page in May 2020">
+                        </a>
+                        <p class="caption">The current design of the shopping page does the minimum of showing listings, categories, support, etc, but is in need of UX and UI improvements to easily find items, quickly view the shopping cart, and remove items as easily as adding them.</p>
+                    </div>
+                </details>
             </section>
-            
+            <section id="designconcepts-tnt" class="project-section">
+                <h2>Design Concepts</h2>
+                <div class="iframe-holder">
+                    <iframe src="./tnt-subpages/tnt-designconcepts.pdf" title="T&T Website Redesign Ideas for the Landing page and Shopping page" frameborder="0" allowfullscreen width="100%" height="100%">
+                    </iframe>
+                </div>
+            </section>
+            <section id="finaldesignconcept-tnt" class="project-section">
+                <h2>Final Design Concepts</h2>
+                <div class="image-holder">
+                    <a href="./assets/img/tnt-landingafter.png" target=_blank rel=noreferrer noopener>
+                        <img src="./assets/img/tnt-landingafter.png" alt="my proposed redesign of the T&T landing page">
+                    </a>
+                    <p class="caption">New concept for landing page has a redesigned navbar, CTA button to directly go to the "Shop Online" page, and the COVID-19 notice in a visually important area. If I had time, I would have found graphics for the section of 3.</p>
+                    <a href="./assets/img/tnt-shoppingpageafter.png" target=_blank rel=noreferrer noopener>
+                        <img src="./assets/img/tnt-shoppingpageafter.png" alt="my proposed redesign of the T&T online shopping page">
+                    </a>
+                    <p class="caption">The new shopping page concept contains a shopping cart drawer and icons to show delivery/pick-up possibilities. Items are not segregated into "Click and Collect" (pick up) or "Delivery to Home" anymore.</p>
+                </div>
+                <details>
+                    <summary>Credit for image sources</summary>
+                    <p>
+                        <a href="https://www.flickr.com/photos/applesnpearsau/12197650876">https://www.flickr.com/photos/applesnpearsau/12197650876</a>
+                        <a href="https://storage.needpix.com/rsynced_images/pear-2737364_1280.png">https://storage.needpix.com/rsynced_images/pear-2737364_1280.png</a>
+                        <a href="https://www.tntsupermarket.com/50681801-seafood-combo-s-1.html">https://www.tntsupermarket.com/50681801-seafood-combo-s-1.html</a>
+                        <a href="https://www.tntsupermarket.com/05008501-garlic.html">https://www.tntsupermarket.com/05008501-garlic.html</a>
+                        <a href="https://www.tntsupermarket.com/76761501-t%26t-milk-cracker.html">https://www.tntsupermarket.com/76761501-t%26t-milk-cracker.html</a>
+                        <a href="https://www.tntsupermarket.com/62708501-egg-tart-6pcs(cold).html">https://www.tntsupermarket.com/50681801-seafood-combo-s-1.htmlhttps://www.tntsupermarket.com/62708501-egg-tart-6pcs(cold).html</a>
+                        <a href="https://www.tntsupermarket.com/50685101-produce-combo-p-5.html">https://www.tntsupermarket.com/50685101-produce-combo-p-5.html</a>
+                        <a href="https://www.tntsupermarket.com/05014501-green-onion.html">https://www.tntsupermarket.com/05014501-green-onion.html</a>
+                        <a href="https://thenounproject.com/search/?q=search&i=1221910">Search Icon</a>
+                    </p>
+                </details>
+            </section>
+            <section id="testing-tnt" class="project-section">
+                <h2>Testing and Results</h2>
+                <p>A/B tests were used for both concepts as a quick way to gauge first impressions.</p>
+                <p>The landing and shopping interfaces were shown. Participants were asked to choose which one they preferred and explain why.</p>
+                <details>
+                    <summary>Concept 1: Landing Page - Which one would you rather do your online grocery shopping with?</summary>
+                    <p><a href="https://app.usabilityhub.com/tests/655cff906698/results/68dc654589a6Landing page concept results">Landing page concept results</a></p>
+                    <div class="image-holder">
+                        <a href="./assets/img/tnt-landingpagetest.png" target=_blank rel=noreferrer noopener>
+                            <img src="./assets/img/tnt-landingpagetest.png" alt="user responses to the landing page redesign AB test">
+                        </a>
+                    </div>
+                    <p>Comments</p>
+                    <p><em>Bigger font, easy to read. 3 big boxes that say hey click me.</em></p>
+                    <p><em>The images in the other one was less inviting</em></p>
+                    <p><em>Cleaner layout</em></p>
+                    <p><em>Things I click most (cart, login/register, shop online) are easiest to see and use</em></p>
+                    <p><em>Cleaner, more concentrated colors (other one felt like too many different colors are together). big simple banner in the middle, looks more professional and minimalistic.</em></p>
+                    <p><em>Webpage is easy to read and digest quickly, direct links to whatever I may most likely want/need to access.</em></p>
+                    <p><em>There's miniscule difference. I just like the promotional imagery being immediately shown.</em></p>
+                    <p><em>It designates the location as to where the delivery would be going to.</em></p>
+                    <p><em>Information displayed clearly and precisely. no unnecessary information clogging the space</em></p>
+                </details>
+                <details>
+                    <summary>Concept 2: Shopping Page - Which page would you choose to add and remove items to your online shopping cart?</summary>
+                    <p><a href="https://www.notion.so/T-T-Online-Grocery-Shopping-Experience-Improvement-UX-Design-Contest-13-0b197bd1008347f1bd295307c25a5511#1ba77c325a2744f0b4be7e8f277fb385">Shopping page concept results</a></p>
+                    <div class="image-holder">
+                        <a href="./assets/img/tnt-shoppingpagetest.png" target=_blank rel=noreferrer noopener>
+                            <img src="./assets/img/tnt-shoppingpagetest.png" alt="user responses to the shopping page redesign AB test">
+                        </a>
+                    </div>
+                    <p>Comments</p>
+                    <p><em>Everything is listed on the side; it's more neat</em></p>
+                    <p><em>It's clean</em></p>
+                    <p><em>Clean interactive page, shows items with names and prices clearly.</em></p>
+                    <p><em>I like the cart listing on the right; being able to see amounts is important because I often accidentally add more than what I want, or there's a page loading issue at some point and I become unsure of what's in my cart</em></p>
+                    <p><em>Sleek and modern design, showcasing what is currently in your cart. the other style is more oldschool. However the one I chose is slightly better at keeping track of what you already purchased so you don't buy too much.</em></p>
+                </details>
+            </section>
+            <section id="recommendations-tnt" class="project-section">
+                <h2>Recommendations for T&T Supermarket</h2>
+                <p>My recommendations for T&T Supermarket are mostly to think about the visual hierarchy in their website and how intuitive it is for a user no matter which language they prefer. Apart from a more concrete design system, I would recommend:</p>
+                <ul>
+                    <li>Add a CTA button linking directly to the shopping page </li>
+                    <li>Unify all shopping items under one page instead of segregating them between Delivery and Pick-up (and labeling "Pick-up" ambiguously)</li>
+                    <li>Adding a shopping cart as a drawer so users can add and remove items on the fly</li>
+                    <li>Though it is outside of my design concepts, do not make the user sign up for online membership before purchasing items, <strong>especially</strong> during the pandemic</li>
+                    <li>It is also too demanding to request the user input a specific address before they even begin shopping. Just make them input a province and city, and ask for the rest once the user is ready to commit to a purchase</li>
+                </ul>
+            </section>
+            <section id="future-tnt" class="project-section">
+                <h2>Future Considerations</h2>
+                <p>Working backwards and setting myself to-do lists really helped me outline my tasks. I will be using Notion for future design and portfolio documentation</p>
+                <p>Setting timers for certain tasks where going down a rabbit hole is too easy</p>
+                <p>An improvement for next time: start earlier during the week so I can gain more of my coworkers' feedback and flesh my ideas out more. I can learn more about conducting testing from them too</p>
+                <p>As of September 2021, the T&T website UI has improved vastly from when I did this case study.</p>
+            </section>
             <p><a href="index.html">Back to Home</a></p>
         </div>
     </div>

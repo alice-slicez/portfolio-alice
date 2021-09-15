@@ -65,6 +65,10 @@ details > p details[open] > summary {
   font-family: $inter;
   padding-bottom: 1em;
   color: $black;
+  .summary-subtitle {
+    font-weight: 700;
+    margin: 0 1em;
+  }
 }
 
 a {

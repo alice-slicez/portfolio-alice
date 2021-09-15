@@ -79,6 +79,15 @@ details > p details[open] > summary {
   font-family: "Inter", sans-serif;
   padding-bottom: 1em;
   color: #192029; }
+  p .summary-subtitle,
+  ol .summary-subtitle,
+  ul .summary-subtitle,
+  li .summary-subtitle,
+  details .summary-subtitle,
+  details > summary .summary-subtitle,
+  details > p details[open] > summary .summary-subtitle {
+    font-weight: 700;
+    margin: 0 1em; }
 
 a {
   color: #205298;
@@ -169,14 +178,60 @@ body {
   body .project-container .project-contents details {
     background-color: #eeeff1;
     margin: 1em;
-    margin-left: 0; }
+    margin-left: 0;
+    transition: 0.4s all ease; }
     body .project-container .project-contents details summary,
-    body .project-container .project-contents details ul {
+    body .project-container .project-contents details ul,
+    body .project-container .project-contents details ol,
+    body .project-container .project-contents details p {
       padding-top: 1em;
       padding-left: 1em;
       margin: 0 1em; }
+      body .project-container .project-contents details summary li .image-holder,
+      body .project-container .project-contents details ul li .image-holder,
+      body .project-container .project-contents details ol li .image-holder,
+      body .project-container .project-contents details p li .image-holder {
+        width: 100%;
+        height: auto; }
+        body .project-container .project-contents details summary li .image-holder img,
+        body .project-container .project-contents details ul li .image-holder img,
+        body .project-container .project-contents details ol li .image-holder img,
+        body .project-container .project-contents details p li .image-holder img {
+          width: 100%;
+          height: auto;
+          padding-top: 0.5em; }
+    body .project-container .project-contents details ul,
+    body .project-container .project-contents details ol {
+      padding-left: 2.5em; }
+    body .project-container .project-contents details .image-holder {
+      padding: 2em; }
+      body .project-container .project-contents details .image-holder .caption {
+        padding: 0 0 1.5em 0;
+        margin: 0; }
+    body .project-container .project-contents details:hover {
+      cursor: pointer;
+      background-color: #627084; }
   body .project-container .project-contents details > summary:first-of-type {
     padding-bottom: 0; }
+  body .project-container .project-contents .iframe-holder {
+    position: relative;
+    padding-top: 56.25%;
+    background-color: #fff;
+    margin: 1em; }
+    body .project-container .project-contents .iframe-holder iframe {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      padding-left: 0.5em; }
+  body .project-container .project-contents .image-holder {
+    padding: 2em 2em 2em 0; }
+    body .project-container .project-contents .image-holder img {
+      min-width: 90%; }
+    body .project-container .project-contents .image-holder .caption {
+      padding: 0 0 1.5em 0;
+      margin: 0; }
 
 footer {
   padding: 2em 6em; }
@@ -203,9 +258,9 @@ footer {
     padding-right: 80px; }
     body header #navbar .name-badge {
       display: inline-block;
-      padding: 8px 16px;
+      padding: 0.5em 1em;
       font-family: "Inter", sans-serif;
-      font-size: 18px; }
+      font-size: 1rem; }
       body header #navbar .name-badge a {
         color: #f3bd5e;
         text-decoration: none; }
@@ -217,7 +272,7 @@ footer {
       justify-content: flex-end; }
       body header #navbar .nav-items li {
         display: inline-block;
-        padding: 8px 16px;
+        padding: 0.5em 1em;
         list-style-type: none; }
         body header #navbar .nav-items li a {
           text-decoration: none;
