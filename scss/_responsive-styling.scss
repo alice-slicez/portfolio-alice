@@ -95,7 +95,7 @@ body {
         }
         &:hover {
           cursor: pointer;
-          background-color: $gray;
+          filter: brightness(0.85);
         }
       }
       details > summary {
@@ -164,22 +164,19 @@ footer {
     header {
       #navbar {
         width: 100%;
-        padding: 16px 0;
+        padding: 1em 5em;
         background: $primary-blue;
         display: inline-flex;
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: space-between;
-        vertical-align: center;
         max-height: 64px;
-        padding-left: 80px;
-        padding-right: 80px;
 
         .name-badge {
           display: inline-block;
           padding: 0.5em 1em;
           font-family: $inter;
-          font-size: 1rem;
+          font-size: 1.125rem;
           a {
             color: $d-accent;
             text-decoration: none;
@@ -197,6 +194,7 @@ footer {
             display: inline-block;
             padding: 0.5em 1em;
             list-style-type: none;
+            font-size: 1.125rem;
 
             a {
               text-decoration: none;
@@ -227,6 +225,7 @@ footer {
 
     .project-section {
       padding-bottom: 3em;
+      width: 35em;
     }
   }
 }
