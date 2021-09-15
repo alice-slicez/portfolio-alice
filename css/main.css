@@ -3,7 +3,7 @@ body .project-container {
   display: grid;
   grid-template-columns: 20% 80%;
   grid-auto-flow: row;
-  column-gap: 8px;
+  column-gap: 0.5em;
   align-items: start;
   padding: 4em 6em; }
   body .project-container .project-toc {
@@ -210,7 +210,7 @@ body {
         margin: 0; }
     body .project-container .project-contents details:hover {
       cursor: pointer;
-      background-color: #627084; }
+      filter: brightness(0.85); }
   body .project-container .project-contents details > summary:first-of-type {
     padding-bottom: 0; }
   body .project-container .project-contents .iframe-holder {
@@ -246,21 +246,18 @@ footer {
     padding: 2em 6em; }
   body header #navbar {
     width: 100%;
-    padding: 16px 0;
+    padding: 1em 5em;
     background: #205298;
     display: inline-flex;
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    vertical-align: center;
-    max-height: 64px;
-    padding-left: 80px;
-    padding-right: 80px; }
+    max-height: 64px; }
     body header #navbar .name-badge {
       display: inline-block;
       padding: 0.5em 1em;
       font-family: "Inter", sans-serif;
-      font-size: 1rem; }
+      font-size: 1.125rem; }
       body header #navbar .name-badge a {
         color: #f3bd5e;
         text-decoration: none; }
@@ -273,7 +270,8 @@ footer {
       body header #navbar .nav-items li {
         display: inline-block;
         padding: 0.5em 1em;
-        list-style-type: none; }
+        list-style-type: none;
+        font-size: 1.125rem; }
         body header #navbar .nav-items li a {
           text-decoration: none;
           color: #fff; }
@@ -292,7 +290,8 @@ footer {
     align-items: flex-start;
     justify-content: flex-start; }
   body .project-section {
-    padding-bottom: 3em; } }
+    padding-bottom: 3em;
+    width: 35em; } }
 
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   body #intro #alice {
@@ -322,7 +321,7 @@ footer {
     transition: 0.4s all ease; }
   .card .cardText {
     min-height: 100%;
-    padding: 20px; }
+    padding: 1.25rem; }
   .card .cardTitle {
     font-family: "Aileron-Semibold", sans-serif;
     font-size: 1.5em;
