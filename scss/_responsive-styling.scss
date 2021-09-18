@@ -157,14 +157,23 @@ footer {
 
 //XXL - 4K
 @include mediaXXL {
+  // .menu-btn {
+  //   display: none;
+  // }
 }
 
 //XL - large laptop, widescreen
 @include mediaXL {
+  // .menu-btn {
+  //   display: none;
+  // }
 }
 
 //Lg - desktop
 @include mediaLg {
+  // .menu-btn {
+  //   display: none;
+  // }
 }
 
 //for anything Lg and above
@@ -199,10 +208,82 @@ footer {
   }
 }
 
+//540px width is to accommodate Surface Pro
+@media only screen and (min-width: 540px) {
+  body {
+    header {
+      // #navbar {
+      //   width: 100%;
+      //   padding: 1em 5em;
+      //   background: $primary-blue;
+      //   display: inline-flex;
+      //   flex-direction: row;
+      //   flex-wrap: nowrap;
+      //   justify-content: space-between;
+      //   max-height: 64px;
+
+      //   .name-badge {
+      //     display: inline-block;
+      //     padding: 0.5em 1em;
+      //     font-family: $inter;
+      //     font-size: 1.125rem;
+      //     a {
+      //       color: $d-accent;
+      //       text-decoration: none;
+      //     }
+      //   }
+
+      //   .nav-items-list {
+      //     margin: 0;
+      //     padding: 0;
+      //     display: flex;
+      //     flex-direction: row;
+      //     justify-content: flex-end;
+
+      //     .nav-item {
+      //       display: inline-block;
+      //       padding: 0.5em 1em;
+      //       list-style-type: none;
+      //       font-size: 1.125rem;
+
+      //       a {
+      //         text-decoration: none;
+      //         color: $true-white;
+      //         &:hover {
+      //           text-decoration: underline;
+      //           color: $true-white;
+      //         }
+      //       }
+      //     }
+      //   }
+      // }
+    }
+  }
+}
+
 //Md - tablet, small laptops
 @include mediaMd {
 }
 
 //Sm - mobile phones
 @include mediaSm {
+  #navbar {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    .nav-items-list,
+    .name-badge {
+      visibility: hidden;
+    }
+
+    &.show {
+      height: 12em;
+      .nav-items-list,
+      .name-badge {
+        visibility: visible;
+        width: 100%;
+        background-color: $primary-blue;
+      }
+    }
+  }
 }

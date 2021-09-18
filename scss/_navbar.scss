@@ -1,8 +1,15 @@
+//reference for transition animation: https://codepen.io/saintasia/pen/XWWZjgz?css-preprocessor=stylus
 .menu-btn {
+  height: 2.5rem;
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
   position: absolute;
-  z-index: 3;
-  left: 2em;
+  left: 1.5em;
   top: 1.5em;
+  z-index: 3;
   cursor: pointer;
   -webkit-transition: 0.4s all ease;
   -moz-transition: 0.4s all ease;
@@ -11,40 +18,37 @@
   transition: 0.4s all ease;
 
   .btn-line {
+    border-bottom: 0.33rem solid $true-white;
     position: absolute;
     display: block;
-    width: 24px;
-    height: 4px;
-    margin: 0 0 5px 0;
-    background: $true-white;
-    -webkit-transition: 0.4s all ease;
-    -moz-transition: 0.4s all ease;
-    -ms-transition: 0.4s all ease;
-    -o-transition: 0.4s all ease;
-    transition: 0.4s all ease;
+    width: 100%;
+    -webkit-transition: top 100ms 230ms, 0.4s all ease;
+    -moz-transition: top 100ms 230ms, 0.4s all ease;
+    -ms-transition: top 100ms 230ms, 0.4s all ease;
+    -o-transition: top 100ms 230ms, 0.4s all ease;
+    transition: top 100ms 230ms, 0.4s all ease;
 
     &:nth-child(1) {
       top: 0;
     }
 
     &:nth-child(2) {
-      top: 0.5em;
+      top: 0.5rem;
     }
 
     &:nth-child(3) {
-      top: 1em;
+      top: 1rem;
     }
   }
 
   &.close {
     transform: rotate(180deg);
-    top: 3.25em;
-    left: 3em;
+    left: 1.5em;
 
     .btn-line {
       //line 1 rotate
       &:nth-child(1) {
-        top: 1em;
+        top: 1.75rem;
         -webkit-transform: rotate(45deg);
         transform: rotate(45deg);
         -ms-transform: translate(5px 5px);
@@ -59,7 +63,7 @@
       }
       //line 3 rotate
       &:nth-child(3) {
-        top: 1em;
+        top: 1.75rem;
         -webkit-transform: rotate(-45deg);
         transform: rotate(-45deg);
         -ms-transform: translate(-7px -6px);
@@ -72,55 +76,56 @@
   }
 }
 
-//540px width is to accommodate Surface Pro
-@media only screen and (min-width: 540px) {
-  body {
-    header {
-      #navbar {
-        width: 100%;
-        padding: 1em 5em;
-        background: $primary-blue;
-        display: inline-flex;
-        flex-direction: row;
-        flex-wrap: nowrap;
-        justify-content: space-between;
-        max-height: 64px;
+#navbar {
+  top: 0;
+  width: 100%;
+  padding: 1em 5em;
+  background: $primary-blue;
+  max-height: 64px;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
 
-        .name-badge {
-          display: inline-block;
-          padding: 0.5em 1em;
-          font-family: $inter;
-          font-size: 1.125rem;
-          a {
-            color: $d-accent;
-            text-decoration: none;
-          }
-        }
+  .name-badge {
+    display: inline-block;
+    padding: 0.5em 1em;
+    font-family: $inter;
+    font-size: 1.125rem;
+    a {
+      color: $d-accent;
+      text-decoration: none;
+    }
+  }
 
-        .nav-items-list {
-          margin: 0;
-          padding: 0;
-          display: flex;
-          flex-direction: row;
-          justify-content: flex-end;
+  .nav-items-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
 
-          .nav-item {
-            display: inline-block;
-            padding: 0.5em 1em;
-            list-style-type: none;
-            font-size: 1.125rem;
+    .nav-item {
+      display: inline-block;
+      padding: 0.5em 1em;
+      list-style-type: none;
+      font-size: 1.125rem;
 
-            a {
-              text-decoration: none;
-              color: $true-white;
-              &:hover {
-                text-decoration: underline;
-                color: $true-white;
-              }
-            }
-          }
+      a {
+        text-decoration: none;
+        color: $true-white;
+        &:hover {
+          text-decoration: underline;
+          color: $true-white;
         }
       }
     }
   }
+}
+
+//surface pro tablet breakpoint
+@media screen and (max-width: 540px) {
+  //   .menu-btn {
+  //     display: block;
+  //   }
 }
