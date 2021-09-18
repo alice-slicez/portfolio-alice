@@ -272,11 +272,33 @@ footer {
     padding-bottom: 3em;
     width: 35em; } }
 
+@media only screen and (min-width: 320px) and (max-width: 480px) {
+  #navbar {
+    position: fixed;
+    top: 0;
+    width: 100%; }
+    #navbar .nav-items-list,
+    #navbar .name-badge {
+      visibility: hidden; }
+    #navbar.show {
+      height: 12em; }
+      #navbar.show .nav-items-list,
+      #navbar.show .name-badge {
+        visibility: visible;
+        width: 100%;
+        background-color: #205298; } }
+
 .menu-btn {
+  height: 2.5rem;
+  width: 2rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0 auto;
   position: absolute;
-  z-index: 3;
-  left: 2em;
+  left: 1.5em;
   top: 1.5em;
+  z-index: 3;
   cursor: pointer;
   -webkit-transition: 0.4s all ease;
   -moz-transition: 0.4s all ease;
@@ -284,29 +306,26 @@ footer {
   -o-transition: 0.4s all ease;
   transition: 0.4s all ease; }
   .menu-btn .btn-line {
+    border-bottom: 0.33rem solid #fff;
     position: absolute;
     display: block;
-    width: 24px;
-    height: 4px;
-    margin: 0 0 5px 0;
-    background: #fff;
-    -webkit-transition: 0.4s all ease;
-    -moz-transition: 0.4s all ease;
-    -ms-transition: 0.4s all ease;
-    -o-transition: 0.4s all ease;
-    transition: 0.4s all ease; }
+    width: 100%;
+    -webkit-transition: top 100ms 230ms, 0.4s all ease;
+    -moz-transition: top 100ms 230ms, 0.4s all ease;
+    -ms-transition: top 100ms 230ms, 0.4s all ease;
+    -o-transition: top 100ms 230ms, 0.4s all ease;
+    transition: top 100ms 230ms, 0.4s all ease; }
     .menu-btn .btn-line:nth-child(1) {
       top: 0; }
     .menu-btn .btn-line:nth-child(2) {
-      top: 0.5em; }
+      top: 0.5rem; }
     .menu-btn .btn-line:nth-child(3) {
-      top: 1em; }
+      top: 1rem; }
   .menu-btn.close {
     transform: rotate(180deg);
-    top: 3.25em;
-    left: 3em; }
+    left: 1.5em; }
     .menu-btn.close .btn-line:nth-child(1) {
-      top: 1em;
+      top: 1.75rem;
       -webkit-transform: rotate(45deg);
       transform: rotate(45deg);
       -ms-transform: translate(5px 5px);
@@ -317,7 +336,7 @@ footer {
     .menu-btn.close .btn-line:nth-child(2) {
       display: none; }
     .menu-btn.close .btn-line:nth-child(3) {
-      top: 1em;
+      top: 1.75rem;
       -webkit-transform: rotate(-45deg);
       transform: rotate(-45deg);
       -ms-transform: translate(-7px -6px);
@@ -326,41 +345,41 @@ footer {
       -o-transform: translate(-7px -6px);
       transform: translate(-7px -6px); }
 
-@media only screen and (min-width: 540px) {
-  body header #navbar {
-    width: 100%;
-    padding: 1em 5em;
-    background: #205298;
-    display: inline-flex;
+#navbar {
+  top: 0;
+  width: 100%;
+  padding: 1em 5em;
+  background: #205298;
+  max-height: 64px;
+  display: inline-flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between; }
+  #navbar .name-badge {
+    display: inline-block;
+    padding: 0.5em 1em;
+    font-family: "Inter", sans-serif;
+    font-size: 1.125rem; }
+    #navbar .name-badge a {
+      color: #f3bd5e;
+      text-decoration: none; }
+  #navbar .nav-items-list {
+    margin: 0;
+    padding: 0;
+    display: flex;
     flex-direction: row;
-    flex-wrap: nowrap;
-    justify-content: space-between;
-    max-height: 64px; }
-    body header #navbar .name-badge {
+    justify-content: flex-end; }
+    #navbar .nav-items-list .nav-item {
       display: inline-block;
       padding: 0.5em 1em;
-      font-family: "Inter", sans-serif;
+      list-style-type: none;
       font-size: 1.125rem; }
-      body header #navbar .name-badge a {
-        color: #f3bd5e;
-        text-decoration: none; }
-    body header #navbar .nav-items-list {
-      margin: 0;
-      padding: 0;
-      display: flex;
-      flex-direction: row;
-      justify-content: flex-end; }
-      body header #navbar .nav-items-list .nav-item {
-        display: inline-block;
-        padding: 0.5em 1em;
-        list-style-type: none;
-        font-size: 1.125rem; }
-        body header #navbar .nav-items-list .nav-item a {
-          text-decoration: none;
+      #navbar .nav-items-list .nav-item a {
+        text-decoration: none;
+        color: #fff; }
+        #navbar .nav-items-list .nav-item a:hover {
+          text-decoration: underline;
           color: #fff; }
-          body header #navbar .nav-items-list .nav-item a:hover {
-            text-decoration: underline;
-            color: #fff; } }
 
 .card-link {
   text-decoration: none; }
