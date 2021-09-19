@@ -416,6 +416,8 @@ body .project-container .project-contents details {
   body .project-container .project-contents details:hover {
     cursor: pointer;
     filter: brightness(0.85); }
+  body .project-container .project-contents details:open {
+    background-color: #eeeff1; }
 
 body .project-container .project-contents details > summary:first-of-type {
   padding-bottom: 0; }
