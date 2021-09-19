@@ -389,6 +389,7 @@ body .project-container .project-contents details {
   body .project-container .project-contents details ul,
   body .project-container .project-contents details ol,
   body .project-container .project-contents details p {
+    width: fit-content;
     padding-top: 1em;
     padding-left: 1em;
     margin: 0 1em; }
@@ -408,9 +409,12 @@ body .project-container .project-contents details {
   body .project-container .project-contents details ul,
   body .project-container .project-contents details ol {
     padding-left: 2.5em; }
+  body .project-container .project-contents details a {
+    overflow-wrap: anywhere; }
   body .project-container .project-contents details .image-holder {
     padding: 2em; }
     body .project-container .project-contents details .image-holder .caption {
+      width: 100%;
       padding: 0 0 1.5em 0;
       margin: 0; }
   body .project-container .project-contents details:hover {
@@ -440,6 +444,7 @@ body .project-container .project-contents .image-holder {
   body .project-container .project-contents .image-holder img {
     min-width: 90%; }
   body .project-container .project-contents .image-holder .caption {
+    width: 100%;
     padding: 0 0 1.5em 0;
     margin: 0; }
 
@@ -475,7 +480,7 @@ footer {
   body .project-container .project-contents ol,
   body .project-container .project-contents ul,
   body .project-container .project-contents details {
-    width: 50%; } }
+    width: 35em; } }
 
 @media only screen and (min-width: 1025px) and (max-width: 1280px) {
   body #intro,
@@ -528,12 +533,13 @@ footer {
         padding-bottom: 2em; }
     body .project-container .project-contents .image-holder {
       padding: 1em 0; }
-    body .project-container .project-contents details .image-holder {
-      padding: 1em 2em; }
+    body .project-container .project-contents details {
+      width: 30em; }
+      body .project-container .project-contents details .image-holder {
+        padding: 1em 2em; }
     body .project-container .project-contents p,
     body .project-container .project-contents ol,
-    body .project-container .project-contents ul,
-    body .project-container .project-contents details {
+    body .project-container .project-contents ul {
       width: 30em; }
     body .project-container .project-section {
       overflow-wrap: break-word; } }
