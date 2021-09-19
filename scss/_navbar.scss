@@ -81,7 +81,7 @@
   width: 100%;
   padding: 1em 5em;
   background: $primary-blue;
-  max-height: 64px;
+  height: 4em;
   display: inline-flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -121,11 +121,4 @@
       }
     }
   }
-}
-
-//surface pro tablet breakpoint
-@media screen and (max-width: 540px) {
-  //   .menu-btn {
-  //     display: block;
-  //   }
 }

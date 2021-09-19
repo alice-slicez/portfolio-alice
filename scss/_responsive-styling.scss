@@ -2,8 +2,15 @@
 body {
   background: $true-white;
 
+  #intro {
+    #alice {
+      color: $primary-blue;
+    }
+  }
+
   #projects {
     background: #f4f5f6;
+    width: 100%;
   }
 
   #project-background {
@@ -157,133 +164,188 @@ footer {
 
 //XXL - 4K
 @include mediaXXL {
-  // .menu-btn {
-  //   display: none;
-  // }
-}
-
-//XL - large laptop, widescreen
-@include mediaXL {
-  // .menu-btn {
-  //   display: none;
-  // }
-}
-
-//Lg - desktop
-@include mediaLg {
-  // .menu-btn {
-  //   display: none;
-  // }
-}
-
-//for anything Lg and above
-@include mediaLgtoXXL {
-  #intro,
-  #projects,
-  #contact {
-    text-align: left;
-    padding: 2em 6em;
-  }
-
   body {
-    #intro {
-      padding-top: 4em;
-      #alice {
-        color: $primary-blue;
-      }
+    #intro,
+    #contact {
+      padding: 4em 6em;
+      width: 90%;
     }
     #projects {
-      width: 100%;
       display: inline-flex;
       flex-wrap: wrap;
       flex-direction: row;
       align-items: flex-start;
       justify-content: flex-start;
-    }
+      padding: 1em 6em;
 
-    .project-section {
-      padding-bottom: 3em;
-      width: 35em;
+      .card {
+        width: 25%;
+      }
     }
   }
 }
 
-//540px width is to accommodate Surface Pro
-@media only screen and (min-width: 540px) {
+//XL - large laptop, widescreen, 1025 to 1280
+@include mediaXL {
+  body {
+    #intro,
+    #contact,
+    footer {
+      padding: 4em 6em;
+      width: 85%;
+    }
+    #projects {
+      display: inline-flex;
+      flex-wrap: wrap;
+      flex-direction: row;
+      align-items: flex-start;
+      justify-content: flex-start;
+      padding: 1em 6em;
+
+      .card {
+        width: 30%;
+      }
+    }
+  }
+}
+
+//Lg - desktop, 768 to 1024
+@include mediaLg {
   body {
     header {
-      // #navbar {
-      //   width: 100%;
-      //   padding: 1em 5em;
-      //   background: $primary-blue;
-      //   display: inline-flex;
-      //   flex-direction: row;
-      //   flex-wrap: nowrap;
-      //   justify-content: space-between;
-      //   max-height: 64px;
+      #navbar {
+        padding: 1em 3em;
+      }
+    }
+    #intro,
+    #contact,
+    footer {
+      padding: 2em 4em;
+    }
+    #projects {
+      padding: 2em 4em;
+      display: inline-flex;
+      flex-flow: row wrap;
+      align-items: flex-start;
+      justify-content: flex-start;
 
-      //   .name-badge {
-      //     display: inline-block;
-      //     padding: 0.5em 1em;
-      //     font-family: $inter;
-      //     font-size: 1.125rem;
-      //     a {
-      //       color: $d-accent;
-      //       text-decoration: none;
-      //     }
-      //   }
-
-      //   .nav-items-list {
-      //     margin: 0;
-      //     padding: 0;
-      //     display: flex;
-      //     flex-direction: row;
-      //     justify-content: flex-end;
-
-      //     .nav-item {
-      //       display: inline-block;
-      //       padding: 0.5em 1em;
-      //       list-style-type: none;
-      //       font-size: 1.125rem;
-
-      //       a {
-      //         text-decoration: none;
-      //         color: $true-white;
-      //         &:hover {
-      //           text-decoration: underline;
-      //           color: $true-white;
-      //         }
-      //       }
-      //     }
-      //   }
-      // }
+      .card {
+        width: 30%;
+      }
     }
   }
 }
 
-//Md - tablet, small laptops
+//Md - tablet, small laptops, 481 to 767px
 @include mediaMd {
-}
-
-//Sm - mobile phones
-@include mediaSm {
-  #navbar {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    .nav-items-list,
-    .name-badge {
-      visibility: hidden;
+  body {
+    header {
+      #navbar {
+        padding: 1em 2em;
+      }
     }
 
-    &.show {
-      height: 12em;
-      .nav-items-list,
-      .name-badge {
-        visibility: visible;
-        width: 100%;
-        background-color: $primary-blue;
+    #intro,
+    #contact {
+      padding: 2em 3em;
+      width: 90%;
+    }
+    #projects {
+      padding: 2em 3em;
+
+      .card {
+        width: 80%;
+        margin: 0 auto;
+        margin-top: 1em;
+        margin-bottom: 1em;
       }
+    }
+    #contact {
+      #contact-info-list {
+        .contact-item {
+          transform: scale(0.9);
+        }
+      }
+    }
+    footer {
+      padding-left: 2em;
+    }
+  }
+}
+
+//540px width is to accommodate Surface Pro and smaller width. This part is mostly for navbar
+@media only screen and (max-width: 540px) {
+  body {
+    header {
+      #navbar {
+        width: 100%;
+        .nav-items-list,
+        .name-badge {
+          display: none;
+        }
+
+        &.show {
+          min-height: 15.5em;
+          display: block;
+
+          .nav-items-list {
+            display: flex;
+            flex-flow: column wrap;
+            align-items: center;
+            justify-content: center;
+            width: 100%;
+            overflow: hidden;
+            .nav-item {
+              padding-top: 1.5em;
+            }
+          }
+          .name-badge {
+            display: block;
+            text-align: center;
+          }
+        }
+      }
+    }
+  }
+}
+
+//the hamburger will disappear when this condition is met
+@media only screen and (min-width: 541px) {
+  body {
+    header {
+      .menu-btn {
+        display: none;
+      }
+    }
+  }
+}
+
+//Sm - mobile phones, max width 480
+@include mediaSm {
+  body {
+    #intro {
+      padding: 1em 2em;
+    }
+    #projects {
+      padding: 2em;
+
+      .card {
+        width: 100%;
+        margin: 0 auto;
+        margin-bottom: 1em;
+      }
+    }
+    #contact {
+      padding: 2em;
+      #contact-info-list {
+        justify-content: space-between;
+        .contact-item {
+          transform: scale(0.85);
+        }
+      }
+    }
+    footer {
+      padding-left: 2em;
     }
   }
 }
