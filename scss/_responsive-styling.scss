@@ -50,7 +50,7 @@ footer {
         ol,
         ul,
         details {
-          width: 50%;
+          width: 35em;
         }
       }
     }
@@ -144,14 +144,15 @@ footer {
           padding: 1em 0;
         }
         details {
+          width: 30em;
+
           .image-holder {
             padding: 1em 2em;
           }
         }
         p,
         ol,
-        ul,
-        details {
+        ul {
           width: 30em;
         }
       }

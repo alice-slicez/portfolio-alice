@@ -58,6 +58,7 @@ body {
         ul,
         ol,
         p {
+          width: fit-content;
           padding-top: 1em;
           padding-left: 1em;
           margin: 0 1em;
@@ -77,9 +78,13 @@ body {
         ol {
           padding-left: 2.5em;
         }
+        a {
+          overflow-wrap: anywhere;
+        }
         .image-holder {
           padding: 2em;
           .caption {
+            width: 100%;
             padding: 0 0 1.5em 0;
             margin: 0;
           }
@@ -118,6 +123,7 @@ body {
           min-width: 90%;
         }
         .caption {
+          width: 100%;
           padding: 0 0 1.5em 0;
           margin: 0;
         }
