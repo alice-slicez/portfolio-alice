@@ -44,6 +44,16 @@ footer {
         width: 25%;
       }
     }
+    .project-container {
+      .project-contents {
+        p,
+        ol,
+        ul,
+        details {
+          width: 50%;
+        }
+      }
+    }
   }
 }
 
@@ -77,6 +87,12 @@ footer {
           .image-holder {
             padding: 0.5em 2em;
           }
+        }
+        p,
+        ol,
+        ul,
+        details {
+          width: 35em;
         }
       }
     }
@@ -132,8 +148,13 @@ footer {
             padding: 1em 2em;
           }
         }
+        p,
+        ol,
+        ul,
+        details {
+          width: 30em;
+        }
       }
-
       .project-section {
         overflow-wrap: break-word;
       }
@@ -323,6 +344,11 @@ footer {
       .project-contents {
         .project-title {
           font-size: 3rem;
+        }
+
+        .project-title,
+        .project-subtitle {
+          overflow-wrap: break-word;
         }
 
         .image-holder {

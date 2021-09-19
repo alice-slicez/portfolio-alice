@@ -470,7 +470,12 @@ footer {
     justify-content: flex-start;
     padding: 1em 6em; }
     body #projects .card {
-      width: 25%; } }
+      width: 25%; }
+  body .project-container .project-contents p,
+  body .project-container .project-contents ol,
+  body .project-container .project-contents ul,
+  body .project-container .project-contents details {
+    width: 50%; } }
 
 @media only screen and (min-width: 1025px) and (max-width: 1280px) {
   body #intro,
@@ -490,7 +495,12 @@ footer {
   body .project-container .project-contents .image-holder {
     padding: 1em 0; }
   body .project-container .project-contents details .image-holder {
-    padding: 0.5em 2em; } }
+    padding: 0.5em 2em; }
+  body .project-container .project-contents p,
+  body .project-container .project-contents ol,
+  body .project-container .project-contents ul,
+  body .project-container .project-contents details {
+    width: 35em; } }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
   body header #navbar {
@@ -520,6 +530,11 @@ footer {
       padding: 1em 0; }
     body .project-container .project-contents details .image-holder {
       padding: 1em 2em; }
+    body .project-container .project-contents p,
+    body .project-container .project-contents ol,
+    body .project-container .project-contents ul,
+    body .project-container .project-contents details {
+      width: 30em; }
     body .project-container .project-section {
       overflow-wrap: break-word; } }
 
@@ -620,6 +635,9 @@ footer {
     padding: 2em; }
     body .project-container .project-contents .project-title {
       font-size: 3rem; }
+    body .project-container .project-contents .project-title,
+    body .project-container .project-contents .project-subtitle {
+      overflow-wrap: break-word; }
     body .project-container .project-contents .image-holder {
       padding: 1em 0; }
     body .project-container .project-contents details .image-holder {
