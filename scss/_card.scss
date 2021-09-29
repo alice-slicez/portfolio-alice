@@ -16,6 +16,7 @@
   margin: 1em;
   margin-left: 0;
   a {
+    &:focus,
     &:hover {
       text-decoration: none;
     }
@@ -70,7 +71,8 @@
     padding-top: 2em;
   }
 
-  /* Hover effects */
+  /* Focus and Hover effects */
+  &:focus,
   &:hover {
     -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
     -moz-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);

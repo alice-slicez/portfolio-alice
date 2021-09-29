@@ -25,12 +25,24 @@ footer {
   }
 }
 
+//macbook resolution
+@include mediaXXLMac {
+  body {
+    #intro,
+    #contact {
+      padding: 4em 6em;
+      width: 85%;
+    }
+  }
+}
+
 //XXL - 4K, 1281+, my computer is 1366x768 resolution
 @include mediaXXL {
   body {
     #intro,
     #contact {
       padding: 4em 6em;
+      width: 85%;
     }
     #projects {
       display: inline-flex;

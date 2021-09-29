@@ -231,8 +231,8 @@ body .project-contents .image-holder .caption {
   transition: 0.6s all ease;
   margin: 1em;
   margin-left: 0;
-  /* Hover effects */ }
-  .card a:hover {
+  /* Focus and Hover effects */ }
+  .card a:focus, .card a:hover {
     text-decoration: none; }
   .card .cardTop {
     min-height: 224px;
@@ -271,20 +271,20 @@ body .project-contents .image-holder .caption {
     font-weight: 600;
     text-transform: uppercase;
     padding-top: 2em; }
-  .card:hover {
+  .card:focus, .card:hover {
     -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
     -moz-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
     -ms-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
     -o-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4); }
-    .card:hover .cardBottom {
+    .card:focus .cardBottom, .card:hover .cardBottom {
       -webkit-transition: 0.4s all ease;
       -moz-transition: 0.4s all ease;
       -ms-transition: 0.4s all ease;
       -o-transition: 0.4s all ease;
       transition: 0.4s all ease;
       opacity: 1; }
-    .card:hover .cardTop {
+    .card:focus .cardTop, .card:hover .cardTop {
       -webkit-transition: 0.4s all ease;
       -moz-transition: 0.4s all ease;
       -ms-transition: 0.4s all ease;
@@ -463,10 +463,17 @@ footer {
   footer p {
     color: #535a65; }
 
+@media only screen and (min-width: 3072px) {
+  body #intro,
+  body #contact {
+    padding: 4em 6em;
+    width: 85%; } }
+
 @media only screen and (min-width: 1281px) {
   body #intro,
   body #contact {
-    padding: 4em 6em; }
+    padding: 4em 6em;
+    width: 85%; }
   body #projects {
     display: inline-flex;
     flex-wrap: wrap;
