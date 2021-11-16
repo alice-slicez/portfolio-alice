@@ -458,7 +458,7 @@ body {
   body #intro #alice {
     color: #3d3bb3; }
   body .intro-first-line {
-    padding-bottom: 0.5em; }
+    padding-bottom: 0.375em; }
   body #projects {
     background: #f4f5f6;
     width: 100%; }
