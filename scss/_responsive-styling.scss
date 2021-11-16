@@ -4,8 +4,11 @@ body {
 
   #intro {
     #alice {
-      color: $primary-blue;
+      color: $primary-purp;
     }
+  }
+  .intro-first-line {
+    padding-bottom: 0.5em;
   }
 
   #projects {
