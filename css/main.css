@@ -29,7 +29,7 @@ p {
 
 @font-face {
   font-family: "Aileron-Semibold";
-  src: url("../assets/fonts/Aileron-Semibold.otf"); }
+  src: url("../assets/fonts/Aileron-SemiBold.otf"); }
 
 @font-face {
   font-family: "Aileron-Regular";
@@ -142,7 +142,7 @@ body .project-contents .image-holder .caption {
   -o-transition: 0.4s all ease;
   transition: 0.4s all ease; }
   .menu-btn .btn-line {
-    border-bottom: 0.33rem solid #fff;
+    border-bottom: 0.33rem solid #3d3bb3;
     position: absolute;
     display: block;
     width: 100%;
@@ -636,6 +636,8 @@ footer {
 @media only screen and (min-width: 320px) and (max-width: 480px) {
   body #intro {
     padding: 1em 2em; }
+    body #intro .intro-first-line {
+      font-size: 3.5rem; }
   body #projects {
     padding: 2em; }
     body #projects .card {
