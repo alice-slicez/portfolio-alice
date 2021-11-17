@@ -331,6 +331,9 @@ footer {
   body {
     #intro {
       padding: 1em 2em;
+      .intro-first-line {
+        font-size: 3.5rem;
+      }
     }
     #projects {
       padding: 2em;
