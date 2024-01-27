@@ -60,12 +60,13 @@ ol,
 ul,
 li,
 details,
-details > summary,
-details > p details[open] > summary {
+details>summary,
+details>p details[open]>summary {
   font-size: 1rem;
   font-family: $inter;
   padding-bottom: 1em;
   color: $black;
+
   .summary-subtitle {
     font-weight: 700;
     margin: 0 1em;
@@ -75,6 +76,7 @@ details > p details[open] > summary {
 a {
   color: $primary-purp;
   text-decoration: none;
+
   &:hover,
   &:focus {
     color: $primary-hover;
@@ -91,6 +93,7 @@ body {
         padding-bottom: 0.25em;
       }
     }
+
     .project-toc {
       counter-reset: ol-num-counter;
 
@@ -111,15 +114,18 @@ body {
           font-family: $inter;
           padding-bottom: 1em;
           counter-increment: ol-num-counter;
+
           &:before {
             content: counter(ol-num-counter) ". ";
             font-size: 1rem;
             color: $gray;
           }
+
           a {
             color: $gray;
             margin-bottom: 0.75em;
             font-size: 1rem;
+
             &:hover,
             &:focus {
               color: $black;
@@ -129,6 +135,7 @@ body {
       }
     }
   }
+
   .project-contents {
     .image-holder {
       .caption {

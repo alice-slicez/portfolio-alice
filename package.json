@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "deploy": "gh-pages -d build",
-    "sass": "node-sass -w scss/ -o build/css/ --recursive"
+    "sass": "sass --watch scss:build/css"
   },
   "repository": {
     "type": "git",
@@ -20,6 +20,6 @@
   "homepage": "https://alice-slicez.github.io/portfolio-alice/",
   "dependencies": {
     "gh-pages": "^3.2.3",
-    "node-sass": "^6.0.1"
+    "sass": "^1.62.1"
   }
 }
