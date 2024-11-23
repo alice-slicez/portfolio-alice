@@ -7,6 +7,7 @@ body {
       color: $primary-purp;
     }
   }
+
   .intro-first-line {
     padding-bottom: 0.375em;
   }
@@ -22,7 +23,8 @@ body {
 }
 
 footer {
-  padding: 0 5em;
+  padding: 0 6em;
+
   p {
     color: $dark-gray;
   }
@@ -31,6 +33,7 @@ footer {
 //macbook resolution
 @include mediaXXLMac {
   body {
+
     #intro,
     #contact {
       padding: 4em 6em;
@@ -39,14 +42,16 @@ footer {
   }
 }
 
-//XXL - 4K, 1281+, my computer is 1366x768 resolution
+//XXL - 4K, 1281+
 @include mediaXXL {
   body {
+
     #intro,
     #contact {
       padding: 4em 6em;
       width: 85%;
     }
+
     #projects {
       display: inline-flex;
       flex-wrap: wrap;
@@ -59,8 +64,10 @@ footer {
         width: 25%;
       }
     }
+
     .project-container {
       .project-contents {
+
         p,
         ol,
         ul,
@@ -75,12 +82,13 @@ footer {
 //XL - large laptop, widescreen, 1025 to 1280
 @include mediaXL {
   body {
+
     #intro,
-    #contact,
-    footer {
+    #contact {
       padding: 4em 6em;
       width: 85%;
     }
+
     #projects {
       display: inline-flex;
       flex-wrap: wrap;
@@ -93,16 +101,19 @@ footer {
         width: 30%;
       }
     }
+
     .project-container {
       .project-contents {
         .image-holder {
           padding: 1em 0;
         }
+
         details {
           .image-holder {
             padding: 0.5em 2em;
           }
         }
+
         p,
         ol,
         ul,
@@ -122,11 +133,13 @@ footer {
         padding: 1em 3em;
       }
     }
+
     #intro,
     #contact,
     footer {
       padding: 2em 4em;
     }
+
     #projects {
       padding: 2em 4em;
       display: inline-flex;
@@ -138,6 +151,7 @@ footer {
         width: 30%;
       }
     }
+
     .project-container {
       padding: 4em 2em;
       column-gap: 0.25em;
@@ -158,6 +172,7 @@ footer {
         .image-holder {
           padding: 1em 0;
         }
+
         details {
           width: 30em;
 
@@ -165,12 +180,14 @@ footer {
             padding: 1em 2em;
           }
         }
+
         p,
         ol,
         ul {
           width: 30em;
         }
       }
+
       .project-section {
         overflow-wrap: break-word;
       }
@@ -186,11 +203,13 @@ footer {
         padding: 1em 2em;
       }
     }
+
     #intro,
     #contact {
       padding: 2em 3em;
       width: 90%;
     }
+
     #projects {
       padding: 2em 3em;
 
@@ -201,6 +220,7 @@ footer {
         margin-bottom: 1em;
       }
     }
+
     #contact {
       #contact-info-list {
         .contact-item {
@@ -208,9 +228,11 @@ footer {
         }
       }
     }
+
     footer {
       padding-left: 2em;
     }
+
     .project-container {
       padding: 4em 2em;
       column-gap: 0;
@@ -231,6 +253,7 @@ footer {
         .image-holder {
           padding: 1em 0;
         }
+
         details {
           .image-holder {
             padding: 1em 2em;
@@ -285,6 +308,7 @@ footer {
     header {
       #navbar {
         width: 100%;
+
         .nav-items-list,
         .name-badge {
           display: none;
@@ -301,10 +325,12 @@ footer {
             justify-content: center;
             width: 100%;
             overflow: hidden;
+
             .nav-item {
               padding-top: 1.5em;
             }
           }
+
           .name-badge {
             display: block;
             text-align: center;
@@ -331,10 +357,12 @@ footer {
   body {
     #intro {
       padding: 1em 2em;
+
       .intro-first-line {
         font-size: 3.5rem;
       }
     }
+
     #projects {
       padding: 2em;
 
@@ -344,18 +372,23 @@ footer {
         margin-bottom: 1em;
       }
     }
+
     #contact {
       padding: 2em;
+
       #contact-info-list {
         justify-content: space-between;
+
         .contact-item {
           transform: scale(0.85);
         }
       }
     }
+
     footer {
       padding-left: 2em;
     }
+
     .project-container {
       display: block;
       padding: 2em;
@@ -387,6 +420,7 @@ footer {
 
       .project-section {
         overflow-wrap: break-word;
+
         h2 {
           letter-spacing: -0.5px;
         }

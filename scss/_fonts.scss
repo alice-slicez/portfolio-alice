@@ -1,25 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@500;600;700&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;700");
 
-@font-face {
-  font-family: "Aileron-Black";
-  src: url("../assets/fonts/Aileron-Black.otf");
-}
-
-@font-face {
-  font-family: "Aileron-Bold";
-  src: url("../assets/fonts/Aileron-Bold.otf");
-}
-
-@font-face {
-  font-family: "Aileron-Semibold";
-  src: url("../assets/fonts/Aileron-SemiBold.otf");
-}
-
-@font-face {
-  font-family: "Aileron-Regular";
-  src: url("../assets/fonts/Aileron-Regular.otf");
-}
-
+$golos: "Golos Text", sans-serif;
 $inter: "Inter", sans-serif;
 
 * {
@@ -30,29 +12,33 @@ $inter: "Inter", sans-serif;
 
 h1 {
   font-size: 4rem;
-  font-family: "Aileron-Black", sans-serif;
+  font-family: $golos;
+  font-weight: 700;
   line-height: 104%;
 }
 
 h2 {
   font-size: 3rem;
-  font-family: "Aileron-Bold", sans-serif;
+  font-family: $golos;
+  font-weight: 700;
 }
 
 h3 {
   font-size: 2.5rem;
-  font-family: "Aileron-Bold", sans-serif;
+  font-family: $golos;
+  font-weight: 700;
 }
 
 h4 {
   font-size: 2rem;
-  font-family: "Aileron-SemiBold", sans-serif;
+  font-family: $golos;
+  font-weight: 500;
 }
 
 h5 {
   font-size: 1.5rem;
-  font-family: "Aileron-Regular", sans-serif;
-  text-transform: uppercase;
+  font-family: $golos;
+  font-weight: 500;
 }
 
 p,
@@ -98,7 +84,7 @@ body {
       counter-reset: ol-num-counter;
 
       p {
-        font-family: "Aileron-Semibold", sans-serif;
+        font-family: $golos;
         font-size: 0.75rem;
         color: $dark-gray;
         text-transform: uppercase;
