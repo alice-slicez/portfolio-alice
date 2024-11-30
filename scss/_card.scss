@@ -130,3 +130,21 @@
     background-size: cover;
   }
 }
+
+#crcg {
+  .cardTop {
+    background: url("../assets/img/crcg/crcg-thumbnail.png") no-repeat;
+    background-origin: padding-box;
+    background-position: top;
+    background-size: cover;
+  }
+}
+
+#prereqs {
+  .cardTop {
+    background: url("../assets/img/prereqs/prereqs-thumbnail.png") no-repeat;
+    background-origin: padding-box;
+    background-position: top;
+    background-size: cover;
+  }
+}
