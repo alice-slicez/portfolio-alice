@@ -26,6 +26,7 @@
     width: 100%;
     height: 18em;
     background-size: cover;
+    background-position: center;
     background-repeat: no-repeat;
   }
 
@@ -61,40 +62,6 @@
     margin: 1.5em 0;
   }
 
-  // .cardTop {
-  //   min-height: 224px;
-  //   border-radius: 0.5em 0.5em 0em 0em;
-  //   -webkit-transition: 0.4s all ease;
-  //   -moz-transition: 0.4s all ease;
-  //   -ms-transition: 0.4s all ease;
-  //   -o-transition: 0.4s all ease;
-  //   transition: 0.4s all ease;
-  //   height: 65%;
-  // }
-
-  // .cardBottom {
-  //   height: 35%;
-  //   -webkit-transition: 0.4s all ease;
-  //   -moz-transition: 0.4s all ease;
-  //   -ms-transition: 0.4s all ease;
-  //   -o-transition: 0.4s all ease;
-  //   transition: 0.4s all ease;
-  // }
-
-  // .cardText {
-  //   min-height: 100%;
-  //   padding: 1.25rem;
-  // }
-
-
-  // .cardInfo {
-  //   padding: 2em 0;
-  //   font-family: $inter;
-  //   font-size: 0.875em;
-  //   font-weight: 500;
-  //   color: $dark-gray;
-  // }
-
   .cardProjectTags {
     color: $secondary-tan;
     font-family: $golos;
@@ -110,69 +77,5 @@
     -ms-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
     -o-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-
-    // .cardBottom {
-    //   -webkit-transition: 0.4s all ease;
-    //   -moz-transition: 0.4s all ease;
-    //   -ms-transition: 0.4s all ease;
-    //   -o-transition: 0.4s all ease;
-    //   transition: 0.4s all ease;
-    //   opacity: 1;
-    // }
-
-    // .cardTop {
-    //   -webkit-transition: 0.4s all ease;
-    //   -moz-transition: 0.4s all ease;
-    //   -ms-transition: 0.4s all ease;
-    //   -o-transition: 0.4s all ease; 
-    //   transition: 0.4s all ease;
-    //   opacity: 0.8;
-    // }
   }
 }
-
-//thumbnails
-// #timeless {
-//   .cardTop {
-//     background: url("../assets/img/timeless-thumbnail.png") no-repeat;
-//     background-origin: padding-box;
-//     background-position: center;
-//     background-size: cover;
-//   }
-// }
-
-// #tnt {
-//   .cardTop {
-//     background: url("../assets/img/tnt-thumbnail.png") no-repeat;
-//     background-origin: padding-box;
-//     background-position: center;
-//     background-size: cover;
-//   }
-// }
-
-// #notes {
-//   .cardTop {
-//     background: url("../assets/img/notes-thumbnail.png") no-repeat;
-//     background-origin: padding-box;
-//     background-position: center;
-//     background-size: cover;
-//   }
-// }
-
-// #crcg {
-//   .cardTop {
-//     background: url("../assets/img/crcg/crcg-thumbnail.png") no-repeat;
-//     background-origin: padding-box;
-//     background-position: top;
-//     background-size: cover;
-//   }
-// }
-
-// #prereqs {
-//   .cardTop {
-//     background: url("../assets/img/prereqs/prereqs-thumbnail.png") no-repeat;
-//     background-origin: padding-box;
-//     background-position: top;
-//     background-size: cover;
-//   }
-// }
