@@ -6,6 +6,14 @@ body {
     #alice {
       color: $primary-purp;
     }
+
+    h1 {
+      font-size: 5em;
+    }
+
+    h5 {
+      padding-bottom: 1em;
+    }
   }
 
   .intro-first-line {
@@ -13,7 +21,6 @@ body {
   }
 
   #projects {
-    background: #f4f5f6;
     width: 100%;
   }
 
@@ -53,15 +60,13 @@ footer {
     }
 
     #projects {
-      display: inline-flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      align-items: flex-start;
-      justify-content: flex-start;
       padding: 1em 6em;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 1em;
 
-      .card {
-        width: 25%;
+      .cardImage {
+        height: 30em;
       }
     }
 
@@ -90,16 +95,10 @@ footer {
     }
 
     #projects {
-      display: inline-flex;
-      flex-wrap: wrap;
-      flex-direction: row;
-      align-items: flex-start;
-      justify-content: flex-start;
       padding: 1em 6em;
-
-      .card {
-        width: 30%;
-      }
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 1em;
     }
 
     .project-container {
@@ -141,15 +140,10 @@ footer {
     }
 
     #projects {
-      padding: 2em 4em;
-      display: inline-flex;
-      flex-flow: row wrap;
-      align-items: flex-start;
-      justify-content: flex-start;
-
-      .card {
-        width: 30%;
-      }
+      padding: 1em 4em;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 1em;
     }
 
     .project-container {
@@ -211,14 +205,10 @@ footer {
     }
 
     #projects {
-      padding: 2em 3em;
-
-      .card {
-        width: 80%;
-        margin: 0 auto;
-        margin-top: 1em;
-        margin-bottom: 1em;
-      }
+      padding: 1em 3em;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 0 0.5em;
     }
 
     #contact {
@@ -364,13 +354,8 @@ footer {
     }
 
     #projects {
+      display: block;
       padding: 2em;
-
-      .card {
-        width: 100%;
-        margin: 0 auto;
-        margin-bottom: 1em;
-      }
     }
 
     #contact {

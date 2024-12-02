@@ -250,66 +250,64 @@ body .project-contents .image-holder .caption {
 .cardLink {
   text-decoration: none;
 }
-
-.card {
-  background: #fff;
-  border-radius: 0.5em;
-  min-height: 400px;
-  width: 25%;
-  -webkit-transition: 0.6s all ease;
-  -moz-transition: 0.6s all ease;
-  -ms-transition: 0.6s all ease;
-  -o-transition: 0.6s all ease;
-  transition: 0.6s all ease;
-  margin: 1em;
-  margin-left: 0;
-  /* Focus and Hover effects */
-}
-.card a:focus, .card a:hover {
+.cardLink:focus, .cardLink:hover {
   text-decoration: none;
 }
-.card .cardTop {
-  min-height: 224px;
-  border-radius: 0.5em 0.5em 0em 0em;
-  -webkit-transition: 0.4s all ease;
-  -moz-transition: 0.4s all ease;
-  -ms-transition: 0.4s all ease;
-  -o-transition: 0.4s all ease;
-  transition: 0.4s all ease;
-  height: 65%;
+
+.card {
+  width: 100%;
+  background: #fff;
+  border-radius: 0.75em;
+  -webkit-transition: 0.3s all ease;
+  -moz-transition: 0.3s all ease;
+  -ms-transition: 0.3s all ease;
+  -o-transition: 0.3s all ease;
+  margin: 1em 1em 1em 0;
+  box-shadow: 0 0.25em 0.375em rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  transition: box-shadow 0.3s ease;
+  /* Focus and Hover effects */
 }
-.card .cardBottom {
-  height: 35%;
-  -webkit-transition: 0.4s all ease;
-  -moz-transition: 0.4s all ease;
-  -ms-transition: 0.4s all ease;
-  -o-transition: 0.4s all ease;
-  transition: 0.4s all ease;
+.card .cardImage {
+  width: 100%;
+  height: 18em;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
-.card .cardText {
-  min-height: 100%;
-  padding: 1.25rem;
+.card .cardContent {
+  padding: 1.5em;
 }
 .card .cardTitle {
-  font-family: "Golos Text", sans-serif;
   font-size: 1.5em;
+  font-family: "Golos Text", sans-serif;
   font-weight: 600;
-  line-height: 108%;
+  color: #192029;
+  line-height: 1.4;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
 .card .cardInfo {
-  padding-top: 1em;
+  color: #192029;
+  line-height: 1.5;
   font-family: "Inter", sans-serif;
   font-size: 0.875em;
   font-weight: 500;
-  color: #535a65;
+  margin-bottom: 0.75em;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 1.5em 0;
 }
 .card .cardProjectTags {
   color: #aa5f40;
   font-family: "Golos Text", sans-serif;
-  font-size: 0.75em;
+  font-size: 0.9em;
   font-weight: 600;
-  text-transform: uppercase;
-  padding-top: 2em;
 }
 .card:focus, .card:hover {
   -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
@@ -317,57 +315,6 @@ body .project-contents .image-holder .caption {
   -ms-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
   -o-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
-}
-.card:focus .cardBottom, .card:hover .cardBottom {
-  -webkit-transition: 0.4s all ease;
-  -moz-transition: 0.4s all ease;
-  -ms-transition: 0.4s all ease;
-  -o-transition: 0.4s all ease;
-  transition: 0.4s all ease;
-  opacity: 1;
-}
-.card:focus .cardTop, .card:hover .cardTop {
-  -webkit-transition: 0.4s all ease;
-  -moz-transition: 0.4s all ease;
-  -ms-transition: 0.4s all ease;
-  -o-transition: 0.4s all ease;
-  transition: 0.4s all ease;
-  opacity: 0.8;
-}
-
-#timeless .cardTop {
-  background: url("../assets/img/timeless-thumbnail.png") no-repeat;
-  background-origin: padding-box;
-  background-position: center;
-  background-size: cover;
-}
-
-#tnt .cardTop {
-  background: url("../assets/img/tnt-thumbnail.png") no-repeat;
-  background-origin: padding-box;
-  background-position: center;
-  background-size: cover;
-}
-
-#notes .cardTop {
-  background: url("../assets/img/notes-thumbnail.png") no-repeat;
-  background-origin: padding-box;
-  background-position: center;
-  background-size: cover;
-}
-
-#crcg .cardTop {
-  background: url("../assets/img/crcg/crcg-thumbnail.png") no-repeat;
-  background-origin: padding-box;
-  background-position: top;
-  background-size: cover;
-}
-
-#prereqs .cardTop {
-  background: url("../assets/img/prereqs/prereqs-thumbnail.png") no-repeat;
-  background-origin: padding-box;
-  background-position: top;
-  background-size: cover;
 }
 
 body #contact #contact-info-list {
@@ -534,11 +481,16 @@ body {
 body #intro #alice {
   color: #3d3bb3;
 }
+body #intro h1 {
+  font-size: 5em;
+}
+body #intro h5 {
+  padding-bottom: 1em;
+}
 body .intro-first-line {
   padding-bottom: 0.375em;
 }
 body #projects {
-  background: #f4f5f6;
   width: 100%;
 }
 body #project-background {
@@ -566,15 +518,13 @@ footer p {
     width: 85%;
   }
   body #projects {
-    display: inline-flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
     padding: 1em 6em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 1em;
   }
-  body #projects .card {
-    width: 25%;
+  body #projects .cardImage {
+    height: 30em;
   }
   body .project-container .project-contents p,
   body .project-container .project-contents ol,
@@ -590,15 +540,10 @@ footer p {
     width: 85%;
   }
   body #projects {
-    display: inline-flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    align-items: flex-start;
-    justify-content: flex-start;
     padding: 1em 6em;
-  }
-  body #projects .card {
-    width: 30%;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 1em;
   }
   body .project-container .project-contents .image-holder {
     padding: 1em 0;
@@ -623,14 +568,10 @@ footer p {
     padding: 2em 4em;
   }
   body #projects {
-    padding: 2em 4em;
-    display: inline-flex;
-    flex-flow: row wrap;
-    align-items: flex-start;
-    justify-content: flex-start;
-  }
-  body #projects .card {
-    width: 30%;
+    padding: 1em 4em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 1em;
   }
   body .project-container {
     padding: 4em 2em;
@@ -672,13 +613,10 @@ footer p {
     width: 90%;
   }
   body #projects {
-    padding: 2em 3em;
-  }
-  body #projects .card {
-    width: 80%;
-    margin: 0 auto;
-    margin-top: 1em;
-    margin-bottom: 1em;
+    padding: 1em 3em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 0 0.5em;
   }
   body #contact #contact-info-list .contact-item {
     transform: scale(0.9);
@@ -770,12 +708,8 @@ footer p {
     font-size: 3.5rem;
   }
   body #projects {
+    display: block;
     padding: 2em;
-  }
-  body #projects .card {
-    width: 100%;
-    margin: 0 auto;
-    margin-bottom: 1em;
   }
   body #contact {
     padding: 2em;
