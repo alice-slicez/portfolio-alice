@@ -318,9 +318,16 @@ body .project-contents .image-holder .caption {
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
 }
 
+body #contact {
+  width: 100%;
+  padding: 2em 6em;
+  background: #3d3bb3;
+}
+body #contact h3,
+body #contact p {
+  color: #fff;
+}
 body #contact #contact-info-list {
-  margin-top: 1em;
-  margin-bottom: 4em;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -507,15 +514,13 @@ footer p {
 }
 
 @media only screen and (min-width: 3072px) {
-  body #intro,
-  body #contact {
+  body #intro {
     padding: 4em 6em;
     width: 85%;
   }
 }
 @media only screen and (min-width: 1281px) {
-  body #intro,
-  body #contact {
+  body #intro {
     padding: 4em 6em;
     width: 85%;
   }
@@ -536,8 +541,7 @@ footer p {
   }
 }
 @media only screen and (min-width: 1025px) and (max-width: 1280px) {
-  body #intro,
-  body #contact {
+  body #intro {
     padding: 4em 6em;
     width: 85%;
   }
