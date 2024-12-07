@@ -42,8 +42,7 @@ footer {
 @include mediaXXLMac {
   body {
 
-    #intro,
-    #contact {
+    #intro {
       padding: 4em 6em;
       width: 85%;
     }
@@ -54,8 +53,7 @@ footer {
 @include mediaXXL {
   body {
 
-    #intro,
-    #contact {
+    #intro {
       padding: 4em 6em;
       width: 85%;
     }
@@ -89,8 +87,7 @@ footer {
 @include mediaXL {
   body {
 
-    #intro,
-    #contact {
+    #intro {
       padding: 4em 6em;
       width: 85%;
     }

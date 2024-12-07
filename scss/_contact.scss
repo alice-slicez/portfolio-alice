@@ -1,8 +1,15 @@
 body {
   #contact {
+    width: 100%;
+    padding: 2em 6em;
+    background: $primary-purp;
+
+    h3,
+    p {
+      color: $true-white;
+    }
+
     #contact-info-list {
-      margin-top: 1em;
-      margin-bottom: 4em;
       display: flex;
       flex-direction: row;
       flex-wrap: nowrap;
@@ -11,8 +18,10 @@ body {
 
       .contact-item {
         transform: scale(0.75);
+
         img {
           filter: contrast(125%);
+
           &:hover {
             border-radius: 100%;
             -webkit-box-shadow: 0 5px 15px rgba(0, 42, 105, 0.6);
