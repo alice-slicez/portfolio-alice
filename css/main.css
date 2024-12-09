@@ -475,7 +475,7 @@ body .project-container .project-contents .image-holder {
   padding: 2em 2em 2em 0;
 }
 body .project-container .project-contents .image-holder img {
-  min-width: 90%;
+  width: 90%;
 }
 body .project-container .project-contents .image-holder .caption {
   width: 100%;
