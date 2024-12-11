@@ -31,31 +31,35 @@ h1 {
   font-size: 4rem;
   font-family: "Golos Text", sans-serif;
   font-weight: 700;
-  line-height: 104%;
+  line-height: 125%;
 }
 
 h2 {
   font-size: 3rem;
   font-family: "Golos Text", sans-serif;
   font-weight: 700;
+  line-height: 125%;
 }
 
 h3 {
   font-size: 2.5rem;
   font-family: "Golos Text", sans-serif;
   font-weight: 700;
+  line-height: 150%;
 }
 
 h4 {
   font-size: 2rem;
   font-family: "Golos Text", sans-serif;
   font-weight: 500;
+  line-height: 150%;
 }
 
 h5 {
   font-size: 1.5rem;
   font-family: "Golos Text", sans-serif;
   font-weight: 500;
+  line-height: 150%;
 }
 
 p,
@@ -102,7 +106,6 @@ body .project-container .project-toc p {
   font-size: 0.75rem;
   color: #535a65;
   text-transform: uppercase;
-  padding-bottom: 2em;
 }
 body .project-container .project-toc .project-toc-process {
   list-style: none;
@@ -111,7 +114,6 @@ body .project-container .project-toc .project-toc-process {
 body .project-container .project-toc .project-toc-process li {
   font-size: 1.125rem;
   font-family: "Inter", sans-serif;
-  padding-bottom: 1em;
   counter-increment: ol-num-counter;
 }
 body .project-container .project-toc .project-toc-process li:before {
@@ -127,7 +129,10 @@ body .project-container .project-toc .project-toc-process li a {
 body .project-container .project-toc .project-toc-process li a:hover, body .project-container .project-toc .project-toc-process li a:focus {
   color: #192029;
 }
-body .project-contents .image-holder .caption {
+body .project-container .project-contents a {
+  font-weight: 700;
+}
+body .project-container .project-contents .image-holder .caption {
   color: #535a65;
   font-size: 0.8125rem;
   line-height: 1.5;
@@ -365,12 +370,23 @@ body .project-container .project-toc {
 body .project-container .project-contents p {
   line-height: 1.5;
 }
+body .project-container .project-contents ul,
+body .project-container .project-contents ol {
+  width: 80%;
+}
+body .project-container .project-contents ul li,
+body .project-container .project-contents ol li {
+  padding: 0.5em 0;
+}
+body .project-container .project-contents ul li ul,
+body .project-container .project-contents ol li ul {
+  padding: 0;
+}
 body .project-container .project-contents h2 {
   padding-bottom: 0.25em;
 }
 body .project-container .project-contents .project-title {
   padding-bottom: 0.25em;
-  line-height: 1;
 }
 body .project-container .project-contents .project-subtitle {
   padding-bottom: 3em;
@@ -534,10 +550,8 @@ footer p {
     height: 30em;
   }
   body .project-container .project-contents p,
-  body .project-container .project-contents ol,
-  body .project-container .project-contents ul,
   body .project-container .project-contents details {
-    width: 35em;
+    width: 60%;
   }
 }
 @media only screen and (min-width: 1025px) and (max-width: 1280px) {
