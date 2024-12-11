@@ -14,19 +14,23 @@ h1 {
   font-size: 4rem;
   font-family: $golos;
   font-weight: 700;
-  line-height: 104%;
+  line-height: 125%;
 }
 
 h2 {
   font-size: 3rem;
   font-family: $golos;
   font-weight: 700;
+  line-height: 125%;
+
 }
 
 h3 {
   font-size: 2.5rem;
   font-family: $golos;
   font-weight: 700;
+  line-height: 150%;
+
 }
 
 h4 {
@@ -88,9 +92,9 @@ body {
         font-size: 0.75rem;
         color: $dark-gray;
         text-transform: uppercase;
-        padding-bottom: 2em;
       }
 
+      //quick links on the left
       .project-toc-process {
         list-style: none;
         counter-reset: ol-num-counter;
@@ -98,7 +102,6 @@ body {
         li {
           font-size: 1.125rem;
           font-family: $inter;
-          padding-bottom: 1em;
           counter-increment: ol-num-counter;
 
           &:before {
@@ -120,14 +123,20 @@ body {
         }
       }
     }
-  }
 
-  .project-contents {
-    .image-holder {
-      .caption {
-        color: $dark-gray;
-        font-size: 0.8125rem; //13px
-        line-height: 1.5;
+    .project-contents {
+
+      a {
+        font-weight: 700;
+      }
+
+      .image-holder {
+
+        .caption {
+          color: $dark-gray;
+          font-size: 0.8125rem; //13px
+          line-height: 1.5;
+        }
       }
     }
   }

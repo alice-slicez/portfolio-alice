@@ -14,13 +14,25 @@ body {
         line-height: 1.5;
       }
 
+      ul,
+      ol {
+        width: 80%;
+
+        li {
+          padding: 0.5em 0;
+
+          ul {
+            padding: 0;
+          }
+        }
+      }
+
       h2 {
         padding-bottom: 0.25em;
       }
 
       .project-title {
         padding-bottom: 0.25em;
-        line-height: 1;
       }
 
       .project-subtitle {
