@@ -137,6 +137,11 @@ body .project-container .project-contents .image-holder .caption {
   font-size: 0.8125rem;
   line-height: 1.5;
 }
+body .hero-p {
+  width: 75%;
+  font-size: 1.25rem;
+  line-height: 150%;
+}
 
 .menu-btn {
   height: 2.5rem;
