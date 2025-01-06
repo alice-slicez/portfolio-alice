@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="./assets/favicon-alice.ico">
+    <link rel="stylesheet" href="css/main.css">
+    <title>Prerequisite Building Tool Redesign - Design by Alice Zhang</title>
+    <script src="./js/main.js" defer></script>
+</head>
+
+<body>
+    <header>
+        <nav id="navbar">
+            <div class="menu-btn">
+                <div class="btn-line"></div>
+                <div class="btn-line"></div>
+                <div class="btn-line"></div>
+            </div>
+            <div class="name-badge"><strong><a href="index.html">Alice Zhang</a></strong></div>
+            <ul class="nav-items-list">
+                <li class="nav-item"><a href="./">About</a></li>
+                <li class="nav-item"><a href="assets/Resume_AliceZhang.pdf" target="_blank"
+                        rel="noopener noreferrer">Resume</a></li>
+                <li class="nav-item"><a href="index.html#projects">Work</a></li>
+                <li class="nav-item"><a href="index.html#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="project-container">
+        <div class="project-toc">
+            <p>process</p>
+            <ol class="project-toc-process">
+                <li><a href="#overview-prereqs">Overview</a></li>
+                <li><a href="#myrole-prereqs">My Role</a></li>
+                <li><a href="#challenges-prereqs">Existing Challenges</a></li>
+                <li><a href="#inspo-prereqs">Inspiration</a></li>
+                <li><a href="#ideation-prereqs">Ideation</a></li>
+                <li><a href="#improvements-prereqs">Improvements</a></li>
+                <li><a href="#mockups-prereqs">Hi-Fidelity Mockups</a></li>
+                <li><a href="#takeaways-prereqs">Takeaways</a></li>
+            </ol>
+        </div>
+        <div class="project-contents">
+            <h1 class="project-title">Prerequisite Building Tool</h1>
+            <div class="project-subtitle">
+                <p>💻 Product Redesign, UX Design, UI Design</p>
+                <p>🛠️ Figma, Sketching</p>
+                <p>💼 Feature redesign for development sprint</p>
+                <p>🗓️ 1 month</p>
+            </div>
+            <section id="overview-prereqs" class="project-section">
+                <h2>Overview</h2>
+                <p>In the Learning Management System (LMS) web application, courses are managed for different customers
+                    that procure course materials that Pelesys provides. This project focuses on redesigning the
+                    outdated prerequisite-building tool embedded within one activity of a course in the Learning
+                    Management System (LMS). This tool is used by administrators to set conditions for unlocking
+                    specific activities, nested courses, or blocks within a course's hierarchy.</p>
+                <h3>Key Concepts</h3>
+                <ul>
+                    <li>
+                        <p><strong>Activity</strong>: A module within a course that serves as a building block of the
+                            overall learning
+                            experience, customized by Pelesys or by the customer’s administration team.</p>
+                    </li>
+                    <li>
+                        <p><strong>Prerequisite</strong>: A set of conditions that must be met to give the trainee
+                            access
+                            to a specific
+                            activity or module within the course.</p>
+                    </li>
+                </ul>
+
+            </section>
+            <section id="myrole-prereqs" class="project-section">
+                <h2>My Role</h2>
+                <p>I was responsible for modernizing and enhancing the user experience of the prerequisite-building
+                    tool, replacing the outdated version in the old UI with a design that is intuitive, functional, and
+                    visually engaging.</p>
+            </section>
+            <section id="challenges-prereqs" class="project-section">
+                <h2>Existing Challenges</h2>
+                <p>The existing prerequisite-building tool was part of the legacy Galaxy system, which hadn’t undergone
+                    a UI revamp since the 1990s. This outdated design presented several significant challenges that
+                    hindered usability and frustrated administrators.</p>
+                <div class="image-holder">
+                    <a href="./assets/img/prereqs/prereqs-galaxy.png" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/img/prereqs/prereqs-galaxy.png"
+                            alt="UI of legacy Galaxy system's prereq builder" />
+                    </a>
+                    <p class="caption">UI of legacy Galaxy system's prereq builder</p>
+                </div>
+                <h3>Key Issues</h3>
+                <ol>
+                    <li>
+                        <p><strong>Rigid Functionality</strong></p>
+                        <ul>
+                            <li>
+                                <p>The interface lacked flexibility, making it impossible to rearrange operators or the
+                                    items being operated on after placement.</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p><strong>Crammed and Confined Layout</strong></p>
+                        <ul>
+                            <li>
+                                <p>The entire tool was squeezed into a small modal. Although a drag handle allowed some
+                                    resizing, the cramped space made it difficult to work comfortably.</p>
+                            </li>
+                            <li>
+                                <p>At least two customers explicitly requested moving away from modals, citing usability
+                                    concerns.</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p><strong>Unintuitive Operator Buttons</strong></p>
+                        <ul>
+                            <li>
+                                <p>The buttons for adding operators (e.g., <code>AND</code>, <code>OR</code>,
+                                    <code>NOT</code>) were tiny and difficult to click, leading to frequent user
+                                    frustration.
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p><strong>Inefficient Syntax Checking</strong></p>
+                        <ul>
+                            <li>
+                                <p>Syntax validation was not live. Users had to click a button every time they wanted to
+                                    check their expression, adding unnecessary steps and slowing down their workflow.
+                                </p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p><strong>Insufficient Support</strong></p>
+                        <ul>
+                            <li>
+                                <p>The only guidance available was four static examples of valid expressions,
+                                    accompanied by basic descriptions of what they meant.</p>
+                            </li>
+                            <li>
+                                <p>There was no way to get help with individual operators or symbols, leaving users
+                                    stranded if they didn’t fully understand the tool's syntax or logic.</p>
+                            </li>
+                        </ul>
+                    </li>
+
+                </ol>
+                <div class="image-holder">
+                    <a href="./assets/img/prereqs/prereqs-oldsupport.png" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/img/prereqs/prereqs-oldsupport.png"
+                            alt="support documentation UI of legacy Galaxy system's prereq builder" />
+                    </a>
+                    <p class="caption">Support documentation UI of legacy Galaxy system's prereq builder</p>
+                </div>
+                <p>💡<span class="highlight">How might we redesign the prerequisite building experience to be flexible,
+                        legible, and
+                        error-resilient?</span></p>
+            </section>
+            <section id="inspo-prereqs" class="project-section">
+                <h2>Inspiration</h2>
+                <p>The primary source of inspiration for this project was Scratch, a block-based programming language
+                    designed for children who are receiving their first exposure to computer programming. Its
+                    Object-Oriented Programming (OOP) approach is colorful, user-friendly, and emphasizes clarity. Key
+                    takeaways from Scratch included:</p>
+                <ul>
+                    <li>
+                        <p>A visual approach to optimize readability.</p>
+                    </li>
+                    <li>
+                        <p>Clear differentiation of elements through colours.</p>
+                    </li>
+                    <li>
+                        <p>Reducing cognitive load by minimizing reading time due to clear visual differentiation of
+                            nesting.</p>
+                    </li>
+                    <li>
+                        <p>Drag-and-drop functionality for ease of use.</p>
+                    </li>
+                </ul>
+                <div class="image-holder">
+                    <a href="./assets/img/prereqs/prereqs-scratch.png" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/img/prereqs/prereqs-scratch.png"
+                            alt="screenshot of the Scratch programming language editor UI" />
+                    </a>
+                </div>
+                <div class="image-holder">
+                    <a href="./assets/img/prereqs/prereqs-scratchnest.png" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/img/prereqs/prereqs-scratchnest.png"
+                            alt="screenshot of nesting example in the Scratch programming language editor UI" />
+                    </a>
+                    <p class="caption">screenshots of the Scratch programming language editor UI and a nesting example
+                    </p>
+
+                </div>
+            </section>
+            <section id="ideation-prereqs">
+                <h2>Ideation</h2>
+                <p>To align with the goals of this redesign, I conceptualized a drag-and-drop interface. Here’s the
+                    structure I devised for the prerequisite sub-tab:</p>
+                <ul>
+                    <li>
+                        <p><strong>Operators</strong>: These include <code>AND</code>, <code>OR</code>,
+                            <code>NOT</code>, <code>result</code>, and <code>parentheses</code> (later replaced by
+                            Groups for clarity). They are housed at the top of the view.
+                        </p>
+                    </li>
+                    <li>
+                        <p><strong>Mini Tree</strong>: A compact representation of the course structure. Each element
+                            has a unique short code. These elements are static and cannot be reordered but can be
+                            dragged into the building area.</p>
+                    </li>
+                    <li>
+                        <p><strong>Builder Area</strong>: The primary workspace where operators and elements from the
+                            Mini Tree combine to form prerequisites.</p>
+                    </li>
+                    <li>
+                        <p><strong>Utility Buttons</strong>: Positioned at the bottom, they allow users to clear the
+                            Builder Area and access support documentation.</p>
+                    </li>
+                </ul>
+                <div class="image-holder">
+                    <a href="./assets/img/prereqs/prereqs-sketches.png" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/img/prereqs/prereqs-sketches.png"
+                            alt="preliminary hand sketched concept of components and prerequisite builder UI" />
+                    </a>
+                    <p class="caption">Preliminary hand sketched concept of components and prerequisite builder UI</p>
+                </div>
+                <h3>Design Considerations</h3>
+                <ul>
+                    <li>
+                        <p>The Mini Tree remains unalterable while the builder is active to ensure users can focus
+                            solely on creating prerequisites without fear of accidental changes to the course structure.
+                        </p>
+                    </li>
+                    <li>
+                        <p>A deliberate arrangement of sections encourages logical flow and user focus.</p>
+                    </li>
+                </ul>
+                <div class="image-holder">
+                    <a href="./assets/img/prereqs/prereqs-layoftheland.png" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/img/prereqs/prereqs-layoftheland.png"
+                            alt="blocked out regions of the prereq builder" />
+                    </a>
+                    <p class="caption">Different regions of the prereq builder, set in a tabbed space</p>
+                </div>
+                <div class="image-holder">
+                    <a href="./assets/img/prereqs/prereqs-default.png" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/img/prereqs/prereqs-default.png"
+                            alt="default setup with mini-tree and operators" />
+                    </a>
+                    <p class="caption">Default setup before any prereqs are made</p>
+                </div>
+                <div class="image-holder">
+                    <a href="./assets/img/prereqs/prereqs-dragging.png" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/img/prereqs/prereqs-dragging.png"
+                            alt="item from mini tree being dragged into building area" />
+                    </a>
+                    <p class="caption">An item from the mini-tree being dragged into the building area to build a
+                        prerequisite</p>
+                </div>
+            </section>
+            <section id="improvements-prereqs" class="project-section">
+                <h2>Improvements</h2>
+                <ol>
+                    <li>
+                        <p><strong>Enhanced Visual Clarity</strong></p>
+                        <ul>
+                            <li>
+                                <p>Replaced parentheses with <strong>Groups</strong> to simplify scope visualization and
+                                    make the tool more intuitive.</p>
+                            </li>
+                            <li>
+                                <p>Limited nesting to two levels to reduce complexity and confusion in large course
+                                    hierarchies.</p>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <p><strong>Revamped Support Documentation</strong></p>
+                        <ul>
+                            <li>
+                                <p>Expanded from a sparse collection of four examples to a detailed, interactive panel
+                                    that explains each operator and result option.</p>
+                            </li>
+                            <li>
+                                <p>Integrated the documentation into the interface via a side panel for easy reference.
+                                    An extended version was also created as a PDF accessible in a new tab.</p>
+                            </li>
+                        </ul>
+                    </li>
+                </ol>
+                <div class="image-holder">
+                    <a href="./assets/img/prereqs/prereqs-newsupport.png" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/img/prereqs/prereqs-newsupport.png"
+                            alt="support documentation on the right side panel" />
+                    </a>
+                </div>
+            </section>
+            <section id="mockups-prereqs" class="project-section">
+                <h2>Hi-Fidelity Mockups</h2>
+                <p>Examples of use cases of the redesigned tool:</p>
+                <div class="image-holder">
+                    <a href="./assets/img/prereqs/prereqs-simpleexpression1.png" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="./assets/img/prereqs/prereqs-simpleexpression1.png"
+                            alt="simple expression that A1 must be completed" />
+                    </a>
+                    <p class="caption">Activity A1 must be completed, and this course does not have a score value.</p>
+                </div>
+                <div class="image-holder">
+                    <a href="./assets/img/prereqs/prereqs-simpleexpression2.png" target="_blank"
+                        rel="noopener noreferrer">
+                        <img src="./assets/img/prereqs/prereqs-simpleexpression2.png"
+                            alt="Either activity A3 must be completed or passed or A2 must have a score less than or equal to 80%" />
+                    </a>
+                    <p class="caption">Either activity A3 must be completed or passed, depending on if the system finds
+                        a score value associated with it, or A2 must have a score less than or equal to 80%</p>
+                </div>
+                <p>Grouping Example:</p>
+                <div class="image-holder">
+                    <a href="./assets/img/prereqs/prereqs-group.png" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/img/prereqs/prereqs-group.png"
+                            alt="Activities A3 or A2 must have a score of 80 or under. l" />
+                    </a>
+                    <p class="caption">Activities A3 or A2 must have a score of 80 or under. This scenario is common for
+                        assigning remedial or supplemental training.</p>
+                </div>
+                <div class="image-holder">
+                    <a href="./assets/img/prereqs/prereqs-nestedgroup.png" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/img/prereqs/prereqs-nestedgroup.png" alt="a nested group" />
+                    </a>
+                    <p class="caption">In this nested group expression, A4 must be passed or completed, or the statement
+                        inside the groups must hold. Groups are used to determine scope and maintain clarity.</p>
+                </div>
+                <p>Error handling examples:</p>
+                <div class="image-holder">
+                    <a href="./assets/img/prereqs/prereqs-errorxof.png" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/img/prereqs/prereqs-errorxof.png" alt="error x of" />
+                    </a>
+                    <p class="caption">This error happens because the expression is comparing two items, but there are
+                        only two items to compare. It is more suitable to use an AND operator or add another expression.
+                    </p>
+                </div>
+                <div class="image-holder">
+                    <a href="./assets/img/prereqs/prereqs-errorambiguous.png" target="_blank" rel="noopener noreferrer">
+                        <img src="./assets/img/prereqs/prereqs-errorambiguous.png" alt="ambiguous and or error" />
+                    </a>
+                    <p class="caption">This error happens because the system cannot determine if A4 AND A5 should be
+                        computed first, or if A3 OR A4 should be first. Grouping would resolve this error.
+                    </p>
+                </div>
+            </section>
+            <section id="takeaways-prereqs" class="project-section">
+                <h2>Takeaways</h2>
+                <p>The transition from the old, uninspired UI to the new, user-friendly design required balancing
+                    creative freedom with strict adherence to an existing design system. Drawing inspiration from
+                    Scratch's UI, which was vastly different from my usual references, provided fresh perspectives.</p>
+                <h3>Future Possibilities</h3>
+                <p>The current design serves its purpose effectively but leaves room for expansion. A modal-based
+                    approach, though not favored by most of the team, could further enhance focus and usability if
+                    designed intentionally for this specific context. It would especially be the case if we were to make
+                    the LMS application available for tablets.</p>
+            </section>
+            <p><a href="index.html">Back to Home</a></p>
+        </div>
+    </div>
+</body>
+
+</html>
