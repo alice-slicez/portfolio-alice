@@ -75,6 +75,13 @@ a {
   }
 }
 
+.about-link {
+  color: $primary-purp;
+  text-decoration: none;
+  font-family: $inter;
+  font-weight: 700;
+}
+
 //project TOC fonts
 body {
   .project-container {
