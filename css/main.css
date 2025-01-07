@@ -94,6 +94,13 @@ a:hover, a:focus {
   text-decoration: underline;
 }
 
+.about-link {
+  color: #3d3bb3;
+  text-decoration: none;
+  font-family: "Inter", sans-serif;
+  font-weight: 700;
+}
+
 body .project-container .project-subtitle p {
   color: #535a65;
   padding-bottom: 0.25em;
@@ -517,6 +524,9 @@ body #intro h5 {
   padding-bottom: 1em;
   width: 80%;
 }
+body .about {
+  width: 100%;
+}
 body .intro-first-line {
   padding-bottom: 0.375em;
 }
@@ -545,6 +555,16 @@ footer p {
     padding: 4em 6em;
     width: 85%;
   }
+  body .about {
+    padding: 4em 6em;
+  }
+  body .about .about-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  body .about .about-container .about-text {
+    padding-right: 2em;
+  }
   body #projects {
     padding: 1em 6em;
     display: grid;
@@ -563,6 +583,16 @@ footer p {
   body #intro {
     padding: 4em 6em;
     width: 85%;
+  }
+  body .about {
+    padding: 4em 6em;
+  }
+  body .about .about-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  body .about .about-container .about-text {
+    padding-right: 2em;
   }
   body #projects {
     padding: 1em 6em;
@@ -591,6 +621,20 @@ footer p {
   body #contact,
   body footer {
     padding: 2em 4em;
+  }
+  body .about {
+    padding: 4em 6em;
+  }
+  body .about .about-container {
+    display: flex;
+    justify-content: space-between;
+  }
+  body .about .about-container .about-text {
+    padding-right: 2em;
+  }
+  body .about .about-container .about-img {
+    scale: 0.8;
+    transform-origin: top right;
   }
   body #projects {
     padding: 1em 4em;
@@ -636,6 +680,16 @@ footer p {
   body #contact {
     padding: 2em 3em;
     width: 90%;
+  }
+  body .about {
+    padding: 4em 6em;
+  }
+  body .about .about-container {
+    display: block;
+  }
+  body .about .about-container .about-img {
+    scale: 0.8;
+    transform-origin: top left;
   }
   body #projects {
     padding: 1em 3em;
@@ -731,6 +785,16 @@ footer p {
   }
   body #intro .intro-first-line {
     font-size: 3.5rem;
+  }
+  body .about {
+    padding: 1em 2em;
+  }
+  body .about .about-container {
+    display: block;
+  }
+  body .about .about-container .about-img {
+    scale: 0.8;
+    transform-origin: top left;
   }
   body #projects {
     display: block;
